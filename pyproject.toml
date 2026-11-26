@@ -1,0 +1,31 @@
+[project]
+name = "contract-key-terms-mcp"
+version = "1.0.0"
+description = "Read-only MCP server that finds CUAD clause types in contracts with a small local sentence model"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE.md"]
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.30,<2"]
+
+[project.scripts]
+contract-key-terms-mcp = "key_terms_mcp.server:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/key_terms_mcp"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
