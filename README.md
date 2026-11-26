@@ -6,6 +6,8 @@ labelled by lawyers at The Atticus Project. The model covers CUAD's 36 clause ty
 termination for convenience, exclusivity, and so on). Everything runs on your machine, and the server makes no
 network calls.
 
+Built by Wilshem Pennick, It Just Gets Better, L.L.C.
+
 ![Demo: listing clause types, extracting key terms from a sample contract, and explaining one prediction](docs/demo.gif)
 
 *The GIF is rendered from the actual output of `scripts/demo.py` (an MCP client calling the three tools on a
@@ -136,8 +138,17 @@ quotes are cut at about 110 characters. The assistant's wording is illustrative.
 ## Security
 
 See [SECURITY.md](SECURITY.md). In short: stdio only, no network, read-only, one allowed folder,
-paths resolved before they are checked, folders you list refused, and the model's checksum verified before it
-loads.
+paths resolved before they are checked, folders you list refused (compared ignoring case, on every system),
+files with more than one hard link refused, and the model's checksum verified before it loads.
+
+## Design notes
+
+- Local and read-only: contracts are often confidential, so the server reads them on your machine, sends
+  nothing anywhere and never changes a file.
+- Paths are resolved before they are checked: a link or `..` can make a path that looks inside the allowed
+  folder lead outside it, so the check runs on where the path really leads.
+- The deny list can only add refusals: settings can name more folders to refuse, but no setting can widen
+  what is read beyond the one allowed folder or remove the built-in refusals.
 
 ## Licence and data
 
