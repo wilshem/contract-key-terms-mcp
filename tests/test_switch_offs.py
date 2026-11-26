@@ -3,6 +3,7 @@ refusal in test_paths.py comes from its own check, and that the tests would catc
 import os
 
 import pytest
+from conftest import make_guard
 
 from key_terms_mcp import paths
 from key_terms_mcp.model import MODEL_PATH, ModelIntegrityError, SentenceModel
@@ -10,25 +11,25 @@ from key_terms_mcp.paths import Guard, PathRefused
 
 
 def test_inside_check(home):
-    on = Guard.create(home / "allowed", home=home)
+    on = make_guard(home / "allowed", home)
     with pytest.raises(PathRefused):
         on.read_text("../outside.txt")
-    off = Guard.create(home / "allowed", home=home, check_inside=False)
+    off = make_guard(home / "allowed", home, check_inside=False)
     assert off.read_text("../outside.txt")[1] == "outside"
 
 
 def test_denied_check(home):
-    on = Guard.create(home, home=home)
+    on = make_guard(home, home)
     with pytest.raises(PathRefused):
-        on.read_text("IJGB/pilots/p1/a.txt")
-    off = Guard.create(home, home=home, check_denied=False)
-    assert off.read_text("IJGB/pilots/p1/a.txt")
+        on.read_text("work/private/p1/a.txt")
+    off = make_guard(home, home, check_denied=False)
+    assert off.read_text("work/private/p1/a.txt")
 
 
 def test_size_check(home):
     with pytest.raises(PathRefused):
-        Guard.create(home / "allowed", home=home, max_bytes=10).read_text("ok.txt")
-    assert Guard.create(home / "allowed", home=home, max_bytes=10, check_size=False).read_text("ok.txt")
+        make_guard(home / "allowed", home, max_bytes=10).read_text("ok.txt")
+    assert make_guard(home / "allowed", home, max_bytes=10, check_size=False).read_text("ok.txt")
 
 
 def test_open_check(home, monkeypatch):
@@ -39,8 +40,8 @@ def test_open_check(home, monkeypatch):
     monkeypatch.setattr(Guard, "resolve", lambda self, path: link)
     monkeypatch.setattr(paths.os, "stat", lambda p, *a, **k: os.lstat(real) if p == link else os.lstat(p))
     with pytest.raises(PathRefused):
-        Guard.create(home / "allowed", home=home).read_text("ok.txt")
-    off = Guard.create(home / "allowed", home=home, check_open=False)
+        make_guard(home / "allowed", home).read_text("ok.txt")
+    off = make_guard(home / "allowed", home, check_open=False)
     assert off.read_text("ok.txt")[1] == "outside"
 
 

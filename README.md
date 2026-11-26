@@ -8,6 +8,9 @@ network calls.
 
 ![Demo: listing clause types, extracting key terms from a sample contract, and explaining one prediction](docs/demo.gif)
 
+*The GIF is rendered from the actual output of `scripts/demo.py` (an MCP client calling the three tools on a
+bundled sample), drawn frame by frame with Pillow by `scripts/render_demo_gif.py`. It is not a screen recording.*
+
 > Not legal advice. Each result quotes what an agreement says and where. It does not say what a clause means,
 > whether it is enforceable, or what follows when a clause is not found.
 
@@ -51,12 +54,24 @@ The server reads files from one folder only, set when it starts. By default that
 sample contracts. Pass `--allow /path/to/folder` (or set `KEY_TERMS_ALLOWED_DIR`) to point it at your own
 `.txt` or `.md` files.
 
+To keep folders out even when they sit inside the allowed folder, list them in `KEY_TERMS_DENY_DIRS`, and list
+folder names to skip wherever they appear in `KEY_TERMS_DENY_NAMES`. Separate entries with `:` on Linux and
+macOS, or `;` on Windows. Common key and credential folders (`~/.ssh`, `~/.aws` and similar) are always refused.
+For example:
+
+```sh
+KEY_TERMS_DENY_DIRS="~/contracts/private:~/contracts/archive" KEY_TERMS_DENY_NAMES="drafts" \
+  uv run contract-key-terms-mcp --allow ~/contracts
+```
+
 ### Claude Code
 
 ```sh
 claude mcp add contract-key-terms -- uv run --directory /path/to/contract-key-terms-mcp contract-key-terms-mcp
 # or, to read your own folder:
 claude mcp add contract-key-terms -- uv run --directory /path/to/contract-key-terms-mcp contract-key-terms-mcp --allow /path/to/contracts
+# with deny settings (claude mcp add -e sets the server's environment):
+claude mcp add contract-key-terms -e KEY_TERMS_DENY_NAMES=drafts -- uv run --directory /path/to/contract-key-terms-mcp contract-key-terms-mcp --allow /path/to/contracts
 ```
 
 ### Claude Desktop
@@ -121,7 +136,8 @@ quotes are cut at about 110 characters. The assistant's wording is illustrative.
 ## Security
 
 See [SECURITY.md](SECURITY.md). In short: stdio only, no network, read-only, one allowed folder,
-paths resolved before they are checked, and the model's checksum verified before it loads.
+paths resolved before they are checked, folders you list refused, and the model's checksum verified before it
+loads.
 
 ## Licence and data
 

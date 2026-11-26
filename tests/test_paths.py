@@ -1,8 +1,9 @@
 import os
 
 import pytest
+from conftest import make_guard
 
-from key_terms_mcp.paths import Guard, PathRefused
+from key_terms_mcp.paths import ENV_DENY_DIRS, ENV_DENY_NAMES, Guard, PathRefused
 
 
 def refused(guard, path, words):
@@ -57,7 +58,7 @@ def test_fifo(guard, home):
 
 
 def test_oversize(home):
-    g = Guard.create(home / "allowed", home=home, max_bytes=10)
+    g = make_guard(home / "allowed", home, max_bytes=10)
     refused(g, "ok.txt", "larger than")
 
 
@@ -66,27 +67,42 @@ def test_empty_and_nul(guard):
     refused(guard, "a\x00.txt", "empty or invalid")
 
 
-@pytest.mark.parametrize("rel", ["IJGB/pilots/p1/a.txt", "IJGB/clients/c1/a.txt", "IJGB/pip-data/a.txt",
-                                 "IJGB/internal/a.txt", "IJGB/project/data/a.txt"])
+@pytest.mark.parametrize("rel", ["work/private/p1/a.txt", "work/records/a.txt", "work/project/data/a.txt",
+                                 ".ssh/a.txt"])
 def test_denied_even_inside_allowed(home, rel):
-    g = Guard.create(home, home=home)  # the allowed folder contains the denied ones
+    g = make_guard(home, home)  # the allowed folder contains the denied ones
     refused(g, rel, "denied folder")
-    assert g.read_text("IJGB/project/ok.txt")
+    assert g.read_text("work/project/ok.txt")
 
 
 def test_symlink_into_denied(home):
-    g = Guard.create(home, home=home)
-    os.symlink(home / "IJGB/pilots/p1/a.txt", home / "allowed" / "p.txt")
+    g = make_guard(home, home)
+    os.symlink(home / "work/private/p1/a.txt", home / "allowed" / "p.txt")
     refused(g, "allowed/p.txt", "denied folder")
 
 
-@pytest.mark.parametrize("rel", ["IJGB/pilots", "IJGB/pilots/p1", "IJGB/clients", "IJGB/pip-data", "IJGB/internal",
-                                 "IJGB/project/data"])
+@pytest.mark.parametrize("rel", ["work/private", "work/private/p1", "work/records", "work/project/data", ".ssh"])
 def test_allowed_folder_cannot_be_denied(home, rel):
     with pytest.raises(PathRefused):
-        Guard.create(home / rel, home=home)
+        make_guard(home / rel, home)
 
 
 def test_allowed_folder_must_exist(home):
     with pytest.raises(PathRefused):
-        Guard.create(home / "missing", home=home)
+        make_guard(home / "missing", home)
+
+
+def test_settings_from_environment(home):
+    env = {ENV_DENY_DIRS: os.pathsep.join(["~/work/private", str(home / "work/records")]), ENV_DENY_NAMES: "data"}
+    g = Guard.create(home, home=home, env=env)
+    for rel in ("work/private/p1/a.txt", "work/records/a.txt", "work/project/data/a.txt"):
+        refused(g, rel, "denied folder")
+    assert g.read_text("work/project/ok.txt")
+
+
+def test_defaults_always_apply(home):
+    g = Guard.create(home, home=home, env={})  # no settings: only the defaults
+    refused(g, ".ssh/a.txt", "denied folder")
+    assert g.read_text("work/private/p1/a.txt")  # not denied without the setting
+    g2 = Guard.create(home, deny_dirs=[], home=home, env={})
+    refused(g2, ".ssh/a.txt", "denied folder")  # an empty list never removes the defaults

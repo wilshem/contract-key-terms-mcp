@@ -14,17 +14,24 @@ from pathlib import Path
 
 SUFFIXES = (".txt", ".md")
 MAX_BYTES = 2 * 1024 * 1024
+ENV_DENY_DIRS = "KEY_TERMS_DENY_DIRS"    # folders never read, separated by the system's path separator
+ENV_DENY_NAMES = "KEY_TERMS_DENY_NAMES"  # folder names never read, wherever they are, separated the same way
+# never read, whatever the settings say: the usual places for keys and credentials
+DEFAULT_DENY_DIRS = ("~/.ssh", "~/.gnupg", "~/.aws", "~/.config", "~/.netrc", "~/.docker", "~/.kube")
 
 
 class PathRefused(ValueError):
     """A path the server will not read."""
 
 
-def denied_roots(home: Path | None = None) -> list[Path]:
-    """Folders never read, even inside the allowed folder: private work and client data folders on the author's
-    machine. Kept in code so no setting can remove them."""
-    base = (home or Path.home()) / "IJGB"
-    return [base / "pilots", base / "clients", base / "pip-data", base / "internal"]
+def _split(value: str | None) -> list[str]:
+    return [v.strip() for v in (value or "").split(os.pathsep) if v.strip()]
+
+
+def _expand(entry: str, home: Path) -> Path:
+    """A setting's folder: "~" means the home folder; a relative path is read from the current folder."""
+    p = home / entry[2:] if entry == "~" or entry.startswith("~/") else Path(entry)
+    return _resolved(p)
 
 
 def _inside(p: Path, root: Path) -> bool:
@@ -38,22 +45,11 @@ def _resolved(p: Path) -> Path:
         return p
 
 
-def is_denied(p: Path, home: Path | None = None) -> bool:
-    home = home or Path.home()
-    work = _resolved(home / "IJGB")
-    if any(_inside(p, _resolved(r)) for r in denied_roots(home)):
-        return True
-    if not _inside(p, work):
-        return False
-    parts = p.relative_to(work).parts
-    folders = parts if p.is_dir() else parts[:-1]
-    return "data" in folders  # any folder named "data" under the work folder
-
-
 @dataclass(frozen=True)
 class Guard:
     allowed: Path
-    home: Path
+    deny_dirs: tuple[Path, ...] = ()
+    deny_names: frozenset[str] = frozenset()
     max_bytes: int = MAX_BYTES
     # switches, for the switch-off tests only: each turns one check off
     check_inside: bool = True
@@ -62,17 +58,32 @@ class Guard:
     check_size: bool = True
 
     @classmethod
-    def create(cls, allowed: str | os.PathLike, home: Path | None = None, **switches) -> Guard:
+    def create(cls, allowed: str | os.PathLike, deny_dirs: list[str] | None = None,
+               deny_names: list[str] | None = None, home: Path | None = None, env: dict | None = None,
+               **switches) -> Guard:
+        """The guard, fixed for the server's life. Denied folders are the defaults plus deny_dirs (or, when None, the
+        KEY_TERMS_DENY_DIRS setting); denied folder names are deny_names (or the KEY_TERMS_DENY_NAMES setting)."""
         home = home or Path.home()
+        env = os.environ if env is None else env
+        dirs = list(DEFAULT_DENY_DIRS) + (_split(env.get(ENV_DENY_DIRS)) if deny_dirs is None else list(deny_dirs))
+        names = _split(env.get(ENV_DENY_NAMES)) if deny_names is None else list(deny_names)
         try:
-            root = Path(allowed).expanduser().resolve(strict=True)
+            root = _expand(str(allowed), home).resolve(strict=True)
         except (OSError, RuntimeError) as e:
             raise PathRefused(f"allowed folder does not exist or cannot be resolved: {e.__class__.__name__}") from None
         if not root.is_dir():
             raise PathRefused("allowed folder is not a folder")
-        if is_denied(root, home):
+        guard = cls(allowed=root, deny_dirs=tuple(_expand(d, home) for d in dirs), deny_names=frozenset(names),
+                    **switches)
+        if guard.is_denied(root, folder=True):
             raise PathRefused("allowed folder is, or is inside, a denied folder")
-        return cls(allowed=root, home=home, **switches)
+        return guard
+
+    def is_denied(self, p: Path, folder: bool = False) -> bool:
+        if any(_inside(p, d) for d in self.deny_dirs):
+            return True
+        folders = p.parts if folder else p.parts[:-1]
+        return any(part in self.deny_names for part in folders)
 
     def resolve(self, path: str) -> Path:
         if not isinstance(path, str) or not path.strip() or "\x00" in path:
@@ -88,7 +99,7 @@ class Guard:
             raise PathRefused("path cannot be resolved (for example a link loop)") from None
         if self.check_inside and not _inside(r, self.allowed):
             raise PathRefused("path is outside the allowed folder")
-        if self.check_denied and is_denied(r, self.home):
+        if self.check_denied and self.is_denied(r):
             raise PathRefused("path is inside a denied folder")
         if r.suffix.lower() not in SUFFIXES:
             raise PathRefused(f"only {', '.join(SUFFIXES)} files are read")

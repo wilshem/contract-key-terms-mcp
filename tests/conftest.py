@@ -13,20 +13,28 @@ def m():
     return model()
 
 
+DENY_DIRS = ["~/work/private", "~/work/records"]
+DENY_NAMES = ["data"]
+
+
 @pytest.fixture
 def home(tmp_path):
-    """A fake home with the denied work folders, and an allowed folder beside them."""
+    """A fake home with private folders, a folder holding a "data" folder, and an allowed folder beside them."""
     h = tmp_path / "home"
-    for d in ("IJGB/pilots/p1", "IJGB/clients/c1", "IJGB/pip-data", "IJGB/internal", "IJGB/project/data", "allowed"):
+    for d in ("work/private/p1", "work/records", "work/project/data", ".ssh", "allowed"):
         (h / d).mkdir(parents=True)
-    for f in ("IJGB/pilots/p1/a.txt", "IJGB/clients/c1/a.txt", "IJGB/pip-data/a.txt", "IJGB/internal/a.txt",
-              "IJGB/project/data/a.txt", "IJGB/project/ok.txt"):
+    for f in ("work/private/p1/a.txt", "work/records/a.txt", "work/project/data/a.txt", ".ssh/a.txt",
+              "work/project/ok.txt"):
         (h / f).write_text("Neither party may assign this Agreement without consent.")
     (h / "allowed" / "ok.txt").write_text("This Agreement shall be governed by the laws of the State of Delaware.")
     (h / "outside.txt").write_text("outside")
     return h
 
 
+def make_guard(allowed, home, **kw):
+    return Guard.create(allowed, deny_dirs=DENY_DIRS, deny_names=DENY_NAMES, home=home, env={}, **kw)
+
+
 @pytest.fixture
 def guard(home):
-    return Guard.create(home / "allowed", home=home)
+    return make_guard(home / "allowed", home)

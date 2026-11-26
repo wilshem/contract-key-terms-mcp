@@ -1,7 +1,7 @@
 # Notices
 
 contract-key-terms-mcp
-Copyright 2026 It Just Gets Better LLC
+Copyright 2026 It Just Gets Better, L.L.C.
 
 The source code is licensed under the Apache License, Version 2.0 (see LICENSE).
 
