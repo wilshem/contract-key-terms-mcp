@@ -106,3 +106,33 @@ def test_defaults_always_apply(home):
     assert g.read_text("work/private/p1/a.txt")  # not denied without the setting
     g2 = Guard.create(home, deny_dirs=[], home=home, env={})
     refused(g2, ".ssh/a.txt", "denied folder")  # an empty list never removes the defaults
+
+
+def test_hard_link_to_denied_file_refused(home):
+    g = make_guard(home, home)
+    os.link(home / "work/private/p1/a.txt", home / "allowed" / "hard.txt")
+    refused(g, "allowed/hard.txt", "more than one hard link")
+
+
+def test_any_file_with_two_hard_links_refused(guard, home):
+    os.link(home / "allowed" / "ok.txt", home / "allowed" / "second.txt")
+    refused(guard, "ok.txt", "more than one hard link")
+    refused(guard, "second.txt", "more than one hard link")
+
+
+@pytest.mark.parametrize("folder", [".SSH", ".Ssh", "work/PRIVATE/p1", "work/Records", "work/project/DATA"])
+def test_denied_ignoring_case(home, folder):
+    (home / folder).mkdir(parents=True, exist_ok=True)
+    (home / folder / "a.txt").write_text("Neither party may assign this Agreement without consent.")
+    g = make_guard(home, home)
+    refused(g, f"{folder}/a.txt", "denied folder")
+    with pytest.raises(PathRefused):
+        make_guard(home / folder, home)  # nor can it be the allowed folder
+
+
+def test_deny_settings_ignore_case(home):
+    (home / "work/project/Drafts").mkdir(parents=True)
+    (home / "work/project/Drafts/a.txt").write_text("x")
+    g = Guard.create(home, deny_dirs=["~/WORK/RECORDS"], deny_names=["DRAFTS"], home=home, env={})
+    refused(g, "work/records/a.txt", "denied folder")
+    refused(g, "work/project/Drafts/a.txt", "denied folder")

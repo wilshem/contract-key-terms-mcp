@@ -51,3 +51,38 @@ def test_finds_assignment(m):
 
 def test_empty_text(m):
     assert not any(v["found"] for v in reader.read("", m).values())
+
+
+class StubModel:
+    """A model with chosen scores: every type used, threshold 0.5; score(sentence) gives each sentence's score."""
+
+    def __init__(self, score):
+        self.score = score
+        self.clauses = {k: {"use": "either", "threshold": 0.5} for k in CLAUSE_TYPES}
+
+    def probabilities(self, sentence):
+        return dict.fromkeys(self.clauses, self.score(sentence))
+
+
+def test_sentence_exactly_at_threshold_is_reported():
+    text = "The Supplier shall deliver the goods on time."
+    out = reader.read(text, StubModel(lambda s: 0.5))
+    assert out["anti_assignment"]["found"]
+    assert [p["text"] for p in out["anti_assignment"]["passages"]] == [text]
+
+
+def test_at_most_two_passages_when_more_pass():
+    text = ("The Supplier shall deliver the goods. The Buyer shall pay the price. "
+            "Either party may end this Agreement on notice.")
+    out = reader.read(text, StubModel(lambda s: 0.9))
+    for v in out.values():
+        assert len(v["passages"]) == reader.MAX_PASSAGES == 2
+
+
+def test_heading_never_quoted_by_itself():
+    text = "12. Assignment.\nNeither party may assign this Agreement without consent."
+    out = reader.read(text, StubModel(lambda s: 0.99))
+    quoted = {p["text"] for v in out.values() for p in v["passages"]}
+    assert next(s for s, _ in reader.sentences(text)) == "Assignment."  # the heading as the splitter sees it
+    assert "Assignment." not in quoted and "12. Assignment." not in quoted
+    assert "Neither party may assign this Agreement without consent." in quoted

@@ -45,6 +45,21 @@ def test_open_check(home, monkeypatch):
     assert off.read_text("ok.txt")[1] == "outside"
 
 
+def test_links_check(home):
+    os.link(home / "work/private/p1/a.txt", home / "allowed" / "hard.txt")
+    with pytest.raises(PathRefused):
+        make_guard(home, home).read_text("allowed/hard.txt")
+    assert make_guard(home, home, check_links=False).read_text("allowed/hard.txt")
+
+
+def test_ignore_case_check(home):
+    (home / ".SSH").mkdir()
+    (home / ".SSH" / "a.txt").write_text("x")
+    with pytest.raises(PathRefused):
+        make_guard(home, home).read_text(".SSH/a.txt")
+    assert make_guard(home, home, ignore_case=False).read_text(".SSH/a.txt")
+
+
 def test_sha256_check(tmp_path):
     import gzip
     import hashlib

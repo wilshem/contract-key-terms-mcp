@@ -9,6 +9,10 @@ What the server does and never does:
   `~/.netrc`, `~/.docker` and `~/.kube` always, plus any folders you list in `KEY_TERMS_DENY_DIRS`, and any
   folder whose name you list in `KEY_TERMS_DENY_NAMES` (both separated by `:` on Linux and macOS, `;` on
   Windows). Settings can add to this list, never remove from it. They are read once at start.
+- The deny check ignores case on every system, so `~/.SSH` counts as `~/.ssh`. It may also refuse a folder
+  that differs from a denied one only in case.
+- A file with more than one hard link is refused, because another of its names could be in a denied folder
+  where no path check can see it. A genuine file that happens to have several hard links is refused too.
 - It never writes, moves or deletes files.
 - It checks the model file's SHA-256 before loading it.
 - Contract text it returns is quoted as data. Treat it as untrusted: a document can contain text written
