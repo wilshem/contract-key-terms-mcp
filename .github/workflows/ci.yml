@@ -36,7 +36,15 @@ jobs:
         run: echo "216c8391a754ef46627ff9b7860f3e34b80951890744e564c80a7984d80ef13b  src/key_terms_mcp/models/key_terms_model.json.gz" | sha256sum -c -
       - name: Public-ready check
         run: python3 scripts/check_public_ready.py
-      - name: Secret scan
-        uses: gitleaks/gitleaks-action@v2
+      - name: Install gitleaks (pinned release, checksum verified)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_VERSION: "8.24.3"
+          GITLEAKS_SHA256: "9991e0b2903da4c8f6122b5c3186448b927a5da4deef1fe45271c3793f4ee29c"
+        run: |
+          f="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          curl -fsSL -o "$RUNNER_TEMP/$f" "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/$f"
+          echo "${GITLEAKS_SHA256}  $RUNNER_TEMP/$f" | sha256sum -c -
+          tar -xzf "$RUNNER_TEMP/$f" -C "$RUNNER_TEMP" gitleaks
+          "$RUNNER_TEMP/gitleaks" version
+      - name: Secret scan (every commit in the history)
+        run: '"$RUNNER_TEMP/gitleaks" git --redact --verbose .'
