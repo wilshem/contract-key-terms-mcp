@@ -26,6 +26,22 @@ jobs:
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --frozen
       - run: uv run pytest -q tests/test_switch_offs.py tests/test_paths.py
+  evaluation-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --group dev --group eval
+      - name: Evaluation script on the offline fixture (no download)
+        run: uv run --frozen pytest -q tests/test_evaluate_cuad.py
+  search-extra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --extra search
+      - name: Search tool, usage log and no-network tests with the [search] extra (fake embedder, no model download)
+        run: uv run --frozen pytest -q tests/test_search.py tests/test_usage_log.py tests/test_no_network_imports.py
   public-ready:
     runs-on: ubuntu-latest
     steps:
@@ -33,7 +49,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Model checksum
-        run: echo "216c8391a754ef46627ff9b7860f3e34b80951890744e564c80a7984d80ef13b  src/key_terms_mcp/models/key_terms_model.json.gz" | sha256sum -c -
+        run: echo "2119001a06c9df6c5d8f5e7cf8f18ff3fd1c160415d31f6cd673c845e0034674  src/key_terms_mcp/models/key_terms_model.json.gz" | sha256sum -c -
       - name: Public-ready check
         run: python3 scripts/check_public_ready.py
       - name: Install gitleaks (pinned release, checksum verified)

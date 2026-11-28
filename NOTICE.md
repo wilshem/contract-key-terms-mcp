@@ -19,6 +19,9 @@ contracts), how common each is across those sentences, and, per clause type, wei
 sentences the dataset's lawyers labelled with that type; the labels for document name, parties and dates were
 not used.
 
+The model is trained from the CUAD v1 release by `scripts/evaluate_cuad.py`, which also writes its evaluation
+results (`docs/evaluation/`).
+
 ## The clause type names (`src/key_terms_mcp/clause_types.py`)
 
 The CUAD category names are from CUAD v1 by The Atticus Project, Inc., CC BY 4.0, as above.

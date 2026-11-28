@@ -19,8 +19,8 @@ def test_heading_only():
 
 def test_read_keys_and_limits(m):
     out = reader.read((SAMPLES / "services_agreement.txt").read_text(), m)
-    used = {k for k in CLAUSE_TYPES if m.clauses[k]["use"] == "either"}
-    assert set(out) == used and len(out) == 33
+    used = {k for k in CLAUSE_TYPES if m.clauses[k]["use"] == "model"}
+    assert set(out) == used
     for k, v in out.items():
         assert v["label"] == CLAUSE_TYPES[k][0]
         assert len(v["passages"]) <= reader.MAX_PASSAGES and v["found"] == bool(v["passages"])
@@ -31,10 +31,10 @@ def test_read_keys_and_limits(m):
             assert len(p["text"]) <= reader.MAX_PASSAGE_CHARS + 3
 
 
-def test_rules_only_types_not_reported(m):
+def test_switched_off_types_not_reported(m):
     out = reader.read("Neither party may assign this Agreement without consent.", m)
     for k, c in m.clauses.items():
-        if c["use"] != "either":
+        if c["use"] != "model":
             assert k not in out
 
 
@@ -58,7 +58,7 @@ class StubModel:
 
     def __init__(self, score):
         self.score = score
-        self.clauses = {k: {"use": "either", "threshold": 0.5} for k in CLAUSE_TYPES}
+        self.clauses = {k: {"use": "model", "threshold": 0.5} for k in CLAUSE_TYPES}
 
     def probabilities(self, sentence):
         return dict.fromkeys(self.clauses, self.score(sentence))

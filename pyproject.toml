@@ -8,12 +8,24 @@ license-files = ["LICENSE", "NOTICE.md"]
 requires-python = ">=3.11"
 dependencies = ["mcp>=1.30,<2"]
 
+[project.optional-dependencies]
+search = ["numpy>=2", "onnxruntime>=1.20", "tokenizers>=0.20"]
+
 [project.scripts]
 contract-key-terms-mcp = "key_terms_mcp.server:main"
+contract-key-terms-mcp-setup = "key_terms_mcp.setup_embeddings:main"
 
 [dependency-groups]
 dev = ["pytest>=8", "pytest-asyncio>=0.23", "ruff>=0.6"]
 demo = ["pillow>=11"]
+eval = ["scikit-learn>=1.5", "numpy>=2"]
+
+[tool.uv]
+# Supply-chain hold: resolve only to files uploaded at least 7 days before locking.
+exclude-newer = "7 days"
+# huggingface-hub comes in through tokenizers (>=0.16.4,<3.0); pinned to the newest release that was at least
+# 7 days old when this was locked (2.4.0, uploaded 2026-10-29).
+constraint-dependencies = ["huggingface-hub==2.4.0"]
 
 [build-system]
 requires = ["hatchling>=1.27"]

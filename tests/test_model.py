@@ -16,7 +16,8 @@ def test_sha256_matches_release():
 
 def test_shape(m):
     assert len(m.vocabulary) == 30000 and len(m.idf) == 30000 and len(m.clauses) == 36
-    assert sum(c["use"] == "either" for c in m.clauses.values()) == 33
+    assert {c["use"] for c in m.clauses.values()} <= {"model", "off"}
+    assert sum(c["use"] == "model" for c in m.clauses.values()) >= 1
 
 
 def test_probabilities_match_original_implementation(m):

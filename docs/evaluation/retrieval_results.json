@@ -1,0 +1,2770 @@
+{
+ "bm25": {
+  "b": 0.75,
+  "k1": 1.2
+ },
+ "chunk_rule": "on the dev set, the chunk size (64, 128 or 256 words) with the highest mean of vector and keyword within-contract recall@3 (CUAD questions); ties go to the smaller size",
+ "chunk_words": 256,
+ "chunk_words_max": 262,
+ "chunk_words_mean": 226.4,
+ "chunks": 13443,
+ "code_sha256": {
+  "scripts/evaluate_cuad.py": "b9a3f36b29cca320f1dfaa8ca8e06a4bb0448de2121fb45549971050b2b1a0c6",
+  "scripts/evaluate_retrieval.py": "55eee497d4177d476f67dbc896f3b89800852bd854e732efdabc3389bd65380f",
+  "src/key_terms_mcp/bm25.py": "0db6e68fe422d4b21a402c79f26e5bc9359031259ad4063119d425384da2a234",
+  "src/key_terms_mcp/chunking.py": "02248dfd274c4cf1521d58e9cbeb406be8c21e9f5c3e283669463add20e42c66",
+  "src/key_terms_mcp/embeddings.py": "31759a3404e3d0c29b29e7304c2c9a93e5c030d9ce45c5390a9b4cc42c6f33bd",
+  "src/key_terms_mcp/reader.py": "f6e00ce37261ea6dd694800192b048beec41d0cfe6636020436bfd30eb4762a0"
+ },
+ "cuad": {
+  "contracts": 510,
+  "release": "CUAD v1, https://doi.org/10.5281/zenodo.4595826",
+  "sha256": "88b694d99007d39777fa44cd72daf8297773d285dc3eab0091ba32078888d18e"
+ },
+ "dev_contracts": 102,
+ "embed_seconds": 1447.7,
+ "embedding_model": {
+  "files": {
+   "onnx/model.onnx": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+   "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+  },
+  "licence": "MIT",
+  "max_tokens": 512,
+  "name": "BAAI/bge-small-en-v1.5",
+  "query_instruction": "Represent this sentence for searching relevant passages: ",
+  "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "questions": {
+  "cuad": "CUAD's own question for the clause type, as written",
+  "name": "the clause type's CUAD category name alone"
+ },
+ "relevance": "a chunk is relevant when it overlaps a lawyer-marked span of the clause type by at least one non-space character",
+ "seconds": 1467,
+ "seed": 20261128,
+ "test_contracts": 408,
+ "test_set": [
+  "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding Agreement_ Agency Agreement",
+  "ABILITYINC_06_15_2020-EX-4.25-SERVICES AGREEMENT",
+  "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT VENTURE AGREEMENT",
+  "ADAMSGOLFINC_03_21_2005-EX-10.17-ENDORSEMENT AGREEMENT",
+  "ADAPTIMMUNETHERAPEUTICSPLC_04_06_2017-EX-10.11-STRATEGIC ALLIANCE AGREEMENT",
+  "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT",
+  "ADMA BioManufacturing, LLC -  Amendment #3 to Manufacturing Agreement ",
+  "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT",
+  "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT(1)",
+  "AIRSPANNETWORKSINC_04_11_2000-EX-10.5-Distributor Agreement",
+  "AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT",
+  "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT",
+  "ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT",
+  "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT",
+  "AMBASSADOREYEWEARGROUPINC_11_17_1997-EX-10.28-ENDORSEMENT AGREEMENT",
+  "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT",
+  "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT",
+  "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",
+  "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller Agreement",
+  "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT",
+  "ATENTOSA_07_06_2020-EX-99.1-JOINT FILING AGREEMENT",
+  "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY AGREEMENT , 2009",
+  "ATMOSENERGYCORP_11_22_2002-EX-10.17-TRANSPORTATION SERVICE AGREEMENT",
+  "AULAMERICANUNITTRUST_04_24_2020-EX-99.8.77-SERVICING AGREEMENT",
+  "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content License Agreement",
+  "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement",
+  "Apollo Endosurgery - Manufacturing and Supply Agreement",
+  "ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement",
+  "ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development Agreement",
+  "Array BioPharma Inc. - LICENSE, DEVELOPMENT AND COMMERCIALIZATION AGREEMENT",
+  "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement",
+  "AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement",
+  "AudibleInc_20001113_10-Q_EX-10.32_2599586_EX-10.32_Co-Branding Agreement_ Marketing Agreement_ Investment Distribution Agreement",
+  "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance Agreement1",
+  "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance Agreement2",
+  "BANGIINC_05_25_2005-EX-10-Premium Managed Hosting Agreement",
+  "BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT",
+  "BELLICUMPHARMACEUTICALS,INC_05_07_2019-EX-10.1-Supply Agreement",
+  "BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT",
+  "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT",
+  "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT",
+  "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT",
+  "BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1)",
+  "BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT - First Amendment",
+  "BIOCEPTINC_08_19_2013-EX-10-COLLABORATION AGREEMENT",
+  "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT",
+  "BIOPURECORP_06_30_1999-EX-10.13-AGENCY AGREEMENT",
+  "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT",
+  "BLACKROCKMUNIHOLDINGSINVESTMENTQUALITYFUND_04_07_2020-EX-99.01-JOINT FILING AGREEMENT",
+  "BLACKSTONEGSOLONG-SHORTCREDITINCOMEFUND_05_11_2020-EX-99.(K)(1)-SERVICE AGREEMENT",
+  "BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement",
+  "BLUEROCKRESIDENTIALGROWTHREIT,INC_06_01_2016-EX-1.1-AGENCY AGREEMENT",
+  "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT",
+  "BOLIVARMININGCORP_05_23_2003-EX-2.1-VISP WEB SITE BUILDING AND HOSTING AGREEMENT",
+  "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+  "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1",
+  "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2",
+  "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4",
+  "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement Agreement",
+  "BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement",
+  "BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement",
+  "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement",
+  "CARDAX,INC_08_19_2014-EX-10.1-COLLABORATION AGREEMENT",
+  "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING AGREEMENT",
+  "CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT",
+  "CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement",
+  "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT",
+  "CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement",
+  "CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement",
+  "CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement",
+  "CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic Alliance Agreement",
+  "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",
+  "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT",
+  "CORIOINC_07_20_2000-EX-10.5-LICENSE AND HOSTING AGREEMENT",
+  "CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",
+  "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT",
+  "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance Agreement3",
+  "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance Agreement4",
+  "CcRealEstateIncomeFundadv_20181205_POS 8C_EX-99.(H)(3)_11447739_EX-99.(H)(3)_Marketing Agreement",
+  "Cerus Corporation - FIRST AMEND TO SUPPLY AND MANUFACTURING AGREEMENT",
+  "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content License Agreement",
+  "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement",
+  "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development Agreement",
+  "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement",
+  "Columbia Laboratories, (Bermuda) Ltd. - AMEND NO. 2 TO MANUFACTURING AND SUPPLY AGREEMENT",
+  "ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development Agreement",
+  "CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement",
+  "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate Agreement",
+  "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License Agreement",
+  "DIVERSINETCORP_03_01_2012-EX-4-RESELLER AGREEMENT",
+  "DOMINIADVISORTRUST_02_18_2005-EX-99.(H)(2)-SPONSORSHIP AGREEMENT",
+  "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING AGREEMENT",
+  "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT",
+  "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP AGREEMENT",
+  "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT",
+  "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT",
+  "DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement",
+  "DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement",
+  "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement",
+  "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement",
+  "ELECTRAMECCANICA VEHICLES CORP. - Manufacturing Agreement",
+  "ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",
+  "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.",
+  "ENTERPRISEPRODUCTSPARTNERSLP_07_08_1998-EX-10.3-TRANSPORTATION CONTRACT",
+  "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT",
+  "ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT",
+  "EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT",
+  "EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement",
+  "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement",
+  "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship Agreement",
+  "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding Agreement",
+  "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement",
+  "ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement",
+  "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement",
+  "EmeraldHealthBioceuticalsInc_20200218_1-A_EX1A-6 MAT CTRCT_11987205_EX1A-6 MAT CTRCT_Development Agreement",
+  "EmmisCommunicationsCorp_20191125_8-K_EX-10.6_11906433_EX-10.6_Marketing Agreement",
+  "EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement",
+  "ExactSciencesCorp_20180822_8-K_EX-10.1_11331629_EX-10.1_Promotion Agreement",
+  "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT",
+  "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_AMENDMENT",
+  "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF",
+  "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_SECONDAMENDMENT",
+  "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT",
+  "FIDELITYNATIONALINFORMATIONSERVICES,INC_08_05_2009-EX-10.3-INTELLECTUAL PROPERTY AGREEMENT",
+  "FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",
+  "FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",
+  "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply Agreement - FUSION",
+  "FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement",
+  "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement",
+  "FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement",
+  "FulucaiProductionsLtd_20131223_10-Q_EX-10.9_8368347_EX-10.9_Content License Agreement",
+  "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement",
+  "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT",
+  "GALACTICOMMTECHNOLOGIESINC_11_07_1997-EX-10.46-WEB HOSTING AGREEMENT",
+  "GALERATHERAPEUTICS,INC_02_14_2020-EX-99.A-JOINT FILING AGREEMENT",
+  "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
+  "GLOBALTECHNOLOGIESLTD_06_08_2020-EX-10.16-CONSULTING AGREEMENT",
+  "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement",
+  "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+  "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement",
+  "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",
+  "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",
+  "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual Property Agreement",
+  "GentechHoldingsInc_20190808_1-A_EX1A-6 MAT CTRCT_11776814_EX1A-6 MAT CTRCT_Distributor Agreement",
+  "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2",
+  "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement3",
+  "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement4",
+  "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+  "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement",
+  "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement",
+  "GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement",
+  "GridironBionutrientsInc_20171206_8-K_EX-10.2_10972556_EX-10.2_Endorsement Agreement",
+  "HALITRON,INC_03_01_2005-EX-10.15-SPONSORSHIP AND DEVELOPMENT AGREEMENT",
+  "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION AGREEMENT",
+  "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1)",
+  "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT - Escrow Agreement",
+  "HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement",
+  "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT",
+  "HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT",
+  "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT",
+  "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT",
+  "HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT",
+  "HarpoonTherapeuticsInc_20200312_10-K_EX-10.18_12051356_EX-10.18_Development Agreement",
+  "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement",
+  "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement",
+  "HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement",
+  "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark License Agreement",
+  "HfEnterprisesInc_20191223_S-1_EX-10.22_11931299_EX-10.22_Development Agreement",
+  "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement",
+  "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE AGREEMENT",
+  "IMPCOTECHNOLOGIESINC_04_15_2003-EX-10.65-JOINT VENTURE AGREEMENT",
+  "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL PROPERTY AGREEMENT",
+  "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT",
+  "INTERNATIONALFASTFOODCORP_04_04_1997-EX-99-FRANCHISE AGREEMENT",
+  "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY AGREEMENT",
+  "INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement",
+  "IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+  "IPAYMENT,INC_05_14_2007-EX-10.1-SPONSORSHIP AGREEMENT",
+  "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT",
+  "IdeanomicsInc_20151124_8-K_EX-10.2_9354744_EX-10.2_Content License Agreement",
+  "IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement",
+  "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement",
+  "ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement",
+  "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement",
+  "InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement",
+  "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor Agreement",
+  "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement",
+  "InvendaCorp_20000828_S-1A_EX-10.2_2588206_EX-10.2_Co-Branding Agreement",
+  "IpassInc_20181203_8-K_EX-99.1_11445874_EX-99.1_Reseller Agreement",
+  "JINGWEIINTERNATIONALLTD_10_04_2007-EX-10.7-INTELLECTUAL PROPERTY AGREEMENT",
+  "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT",
+  "KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT",
+  "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT",
+  "KIROMICBIOPHARMA,INC_05_11_2020-EX-10.23-CONSULTING AGREEMENT",
+  "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL PROPERTY AGREEMENT",
+  "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part1",
+  "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",
+  "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement",
+  "LECLANCHE\u0301 S.A. - JOINT DEVELOPMENT AND MARKETING AGREEMENT",
+  "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",
+  "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT",
+  "LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT",
+  "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT",
+  "LOYALTYPOINTINC_11_16_2004-EX-10.2-RESELLER AGREEMENT",
+  "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR AGREEMENT",
+  "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding Agreement",
+  "LegacyEducationAllianceInc_20200330_10-K_EX-10.18_12090678_EX-10.18_Development Agreement",
+  "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1",
+  "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement2",
+  "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement Agreement",
+  "LinkPlusCorp_20050802_8-K_EX-10_3240252_EX-10_Affiliate Agreement",
+  "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development Agreement",
+  "Loop Industries, Inc. - Marketing Agreement",
+  "MACY_S,INC_05_11_2020-EX-99.4-JOINT FILING AGREEMENT",
+  "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT",
+  "MANUFACTURERSSERVICESLTD_06_05_2000-EX-10.14-OUTSOURCING AGREEMENT",
+  "MARSHALLHOLDINGSINTERNATIONAL,INC_04_14_2004-EX-10.15-ENDORSEMENT AGREEMENT",
+  "MARTINMIDSTREAMPARTNERSLP_01_23_2004-EX-10.3-TRANSPORTATION SERVICES AGREEMENT",
+  "MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT",
+  "MEDIWOUNDLTD_01_15_2014-EX-10.6-SUPPLY AGREEMENT",
+  "MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT",
+  "MERITLIFEINSURANCECO_06_19_2020-EX-10.(XIV)-MASTER SERVICES AGREEMENT",
+  "MFAFINANCIAL,INC_07_06_2020-EX-99.D-JOINT FILING AGREEMENT",
+  "MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT",
+  "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC ALLIANCE AGREEMENT",
+  "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT",
+  "MPLXLP_06_17_2015-EX-10.1-TRANSPORTATION SERVICES AGREEMENT",
+  "MRSFIELDSORIGINALCOOKIESINC_01_29_1998-EX-10-FRANCHISE AGREEMENT",
+  "MSCIINC_02_28_2008-EX-10.10-",
+  "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller Agreement Premier Addendum",
+  "Magenta Therapeutics, Inc. - Master Development and Manufacturing Agreement",
+  "MetLife, Inc. - Remarketing Agreement",
+  "Microgenics Corporation - Collaborative Development and Commercialization Agreement",
+  "MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement",
+  "Monsanto Company - SECOND A_R EXCLUSIVE AGENCY AND MARKETING AGREEMENT ",
+  "MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement",
+  "MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement",
+  "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding Agreement",
+  "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP AGREEMENT",
+  "NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT",
+  "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR AGREEMENT_Amendment",
+  "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR AGREEMENT_New",
+  "NETGEAR,INC_04_21_2003-EX-10.16- AMENDMENT #2 TO THE DISTRIBUTION AGREEMENT",
+  "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",
+  "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT",
+  "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT",
+  "NETZEEINC_11_14_2002-EX-10.3-MAINTENANCE AGREEMENT",
+  "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING AGREEMENT",
+  "NICELTD_06_26_2003-EX-4.5-OUTSOURCING AGREEMENT",
+  "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT VENTURE AGREEMENT",
+  "NUVEEN - REMARKETING AGREEMENT",
+  "NYLIACVARIABLEANNUITYSEPARATEACCOUNTIII_04_10_2020-EX-99.8.KK-SERVICE AGREEMENT",
+  "NakedBrandGroupInc_20150731_POS AM (on S-1)_EX-10.75_9196027_EX-10.75_Endorsement Agreement",
+  "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding Agreement",
+  "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing Agreement_ Supply Agreement",
+  "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement",
+  "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement",
+  "OFGBANCORP_03_28_2007-EX-10.23-OUTSOURCING AGREEMENT",
+  "OLDAPIWIND-DOWNLTD_01_08_2016-EX-1.3-AGENCY AGREEMENT1",
+  "OLDAPIWIND-DOWNLTD_01_08_2016-EX-1.3-AGENCY AGREEMENT2",
+  "OMINTO,INC_03_29_2004-EX-10-RESELLER AGREEMENT",
+  "ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT",
+  "ONEMAINHOLDINGS,INC_02_20_2020-EX-99.D-JOINT FILING AGREEMENT",
+  "OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT",
+  "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT",
+  "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC ALLIANCE AGREEMENT",
+  "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT by and among UNITED TECHNOLOGIES CORPORATION, OTIS WORLDWIDE CORPORATION and CARRIER ~1",
+  "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP AGREEMENT",
+  "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT ",
+  "PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT",
+  "PFSFUNDS_06_26_2020-EX-99.H OTH MAT CONT-SERVICES AGREEMENT",
+  "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+  "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT",
+  "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL PROPERTY AGREEMENT",
+  "PRIMEENERGYRESOURCESCORP_04_02_2007-EX-10.28-COMPLETION AND LIQUIDITY MAINTENANCE AGREEMENT",
+  "PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT",
+  "PROLONGINTERNATIONALCORP_03_23_1998-EX-10.16-SPONSORSHIP AGREEMENT",
+  "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark License Agreement",
+  "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding Agreement",
+  "PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement",
+  "PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1",
+  "PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement3",
+  "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement1",
+  "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2",
+  "PerformanceSportsBrandsInc_20110909_S-1_EX-10.10_7220214_EX-10.10_Endorsement Agreement",
+  "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement Agreement",
+  "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement",
+  "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing Agreement",
+  "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content License Agreement_ Marketing Agreement_ Sales-Purchase Agreement1",
+  "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content License Agreement_ Marketing Agreement_ Sales-Purchase Agreement2",
+  "PrecheckHealthServicesInc_20200320_8-K_EX-99.2_12070169_EX-99.2_Distributor Agreement",
+  "Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement",
+  "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement",
+  "QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT",
+  "QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT",
+  "QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement",
+  "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE AND HOSTING AGREEMENT",
+  "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
+  "RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT",
+  "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
+  "RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT",
+  "RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement",
+  "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding Agreement",
+  "RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement",
+  "RareElementResourcesLtd_20171019_SC 13D_EX-99.4_10897534_EX-99.4_Intellectual Property Agreement",
+  "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement",
+  "RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement",
+  "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement",
+  "ReynoldsConsumerProductsInc_20191115_S-1_EX-10.18_11896469_EX-10.18_Supply Agreement",
+  "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement",
+  "RgcResourcesInc_20151216_8-K_EX-10.3_9372751_EX-10.3_Franchise Agreement",
+  "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development Agreement",
+  "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY AGREEMENT",
+  "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+  "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration Agreement",
+  "SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT",
+  "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE LICENSE AND MAINTENANCE AGREEMENT",
+  "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+  "SLOVAKWIRELESSFINANCECOBV_03_28_2001-EX-4.(B)(II).3-Maintenance and support contract for SICAP(R) modules",
+  "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET MAINTENANCE AGREEMENT",
+  "SOLUTIONSVENDINGINTERNATIONAL,INC_03_31_2020-EX1A-1 UNDR AGMT-SERVICES AGREEMENT",
+  "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP AGREEMENT",
+  "SPARKLINGSPRINGWATERHOLDINGSLTD_07_03_2002-EX-10.13-SOFTWARE LICENSE AND MAINTENANCE AGREEMENT",
+  "SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT",
+  "SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT",
+  "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation Agreement of 50MWp Photovoltaic Grid-connected Power Generation Project in Yangqiao of~1",
+  "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT",
+  "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT",
+  "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT",
+  "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION AND MAINTENANCE AGREEMENT",
+  "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT",
+  "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
+  "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE LICENSE AND MAINTENANCE AGREEMENT",
+  "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE AGREEMENT",
+  "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT",
+  "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement",
+  "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1",
+  "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement2",
+  "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor Agreement",
+  "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT",
+  "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement",
+  "SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement",
+  "Sonos, Inc. - Manufacturing Agreement ",
+  "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement2",
+  "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement3",
+  "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement4",
+  "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement",
+  "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement",
+  "SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement",
+  "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE AGREEMENT",
+  "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT FILING AGREEMENT",
+  "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT",
+  "TELKOMSALTD_01_30_2003-EX-10-LICENCE AND MAINTENANCE AGREEMENT",
+  "THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT",
+  "TICKETSCOMINC_06_22_1999-EX-10.22-SPONSORSHIP AGREEMENT",
+  "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT",
+  "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT",
+  "TRIZETTOGROUPINC_08_18_1999-EX-10.17-TECHNICAL INFRASTRUCTURE MAINTENANCE AGREEMENT",
+  "TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT",
+  "TURNKEYCAPITAL,INC_07_20_2017-EX-1.1-Strategic Alliance Agreement",
+  "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement",
+  "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement",
+  "TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement",
+  "TubeMediaCorp_20060310_8-K_EX-10.1_513921_EX-10.1_Affiliate Agreement",
+  "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT",
+  "ULTRAGENYXPHARMACEUTICALINC_12_23_2013-EX-10.9-SUPPLY AGREEMENT",
+  "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing Agreement with the BISYS Group, Inc.",
+  "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT",
+  "UpjohnInc_20200121_10-12G_EX-2.6_11948692_EX-2.6_Manufacturing Agreement_ Supply Agreement",
+  "UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2",
+  "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT",
+  "VAPOTHERM, INC. - Manufacturing and Supply Agreement",
+  "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT",
+  "VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT",
+  "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT",
+  "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT",
+  "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE AND SUPPORT AGREEMENT",
+  "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP AGREEMENT",
+  "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT FILING STATEMENT",
+  "VISIUMTECHNOLOGIES,INC_10_20_2004-EX-10.20-DISTRIBUTOR AGREEMENT",
+  "VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT",
+  "VIVINT SOLAR, INC. - NON-COMPETITION AGREEMENT",
+  "VNUE,INC_07_10_2015-EX-10.1-SPONSORSHIP AGREEMENT",
+  "VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement",
+  "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development Agreement",
+  "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement",
+  "VnueInc_20150914_8-K_EX-10.1_9259571_EX-10.1_Promotion Agreement",
+  "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT AGREEMENT",
+  "WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT",
+  "WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT",
+  "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield Maintenance Agreement",
+  "WESTERN COPPER - NON-COMPETITION AGREEMENT",
+  "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT AGREEMENT",
+  "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT AGREEMENT - Intellectual Property Rights                 Confidentiality and Non-Use Obligations Agreement",
+  "WORLDWIDESTRATEGIESINC_11_02_2005-EX-10-RESELLER AGREEMENT",
+  "WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT",
+  "WatchitMediaInc_20061201_8-K_EX-10.1_4148672_EX-10.1_Content License Agreement",
+  "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement",
+  "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement",
+  "XACCT Technologies, Inc.SUPPORT AND MAINTENANCE AGREEMENT",
+  "XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",
+  "XLITECHNOLOGIES,INC_12_11_2015-EX-10.1-Sponsorship Agreement",
+  "XYBERNAUTCORP_07_12_2002-EX-4-SPONSORSHIP AGREEMENT",
+  "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement",
+  "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement",
+  "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT",
+  "Zounds Hearing, Inc. - MANUFACTURING DESIGN MARKETING AGREEMENT",
+  "ZtoExpressCaymanInc_20160930_F-1_EX-10.10_9752871_EX-10.10_Transportation Agreement"
+ ],
+ "truncated_chunks": 190,
+ "versions": {
+  "numpy": "2.5.5",
+  "python": "3.14.6",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1"
+ },
+ "whole_pool": {
+  "keyword/cuad": {
+   "macro": {
+    "precision@5": 0.45,
+    "recall@1": 0.4167,
+    "recall@3": 0.75,
+    "recall@5": 0.8333,
+    "rr": 0.6036
+   },
+   "micro": {
+    "precision@5": 0.45,
+    "recall@1": 0.4167,
+    "recall@3": 0.75,
+    "recall@5": 0.8333,
+    "rr": 0.6036
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.125
+    },
+    "affiliate_license_licensor": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.125
+    },
+    "anti_assignment": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "audit_rights": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "cap_on_liability": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "change_of_control": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "competitive_restriction_exception": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "covenant_not_to_sue": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "exclusivity": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "rr": 0.25
+    },
+    "governing_law": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "insurance": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "ip_ownership_assignment": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "joint_ip": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "rr": 0.25
+    },
+    "license_grant": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "liquidated_damages": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "minimum_commitment": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "most_favored_nation": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.1667
+    },
+    "no_solicit_customers": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "no_solicit_employees": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_compete": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0204
+    },
+    "non_disparagement": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_transferable_license": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "notice_to_end_renewal": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "perpetual_license": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "post_termination_services": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "price_restrictions": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "renewal_term": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "revenue_sharing": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "rofr": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "source_code_escrow": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "termination_for_convenience": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "third_party_beneficiary": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.125
+    },
+    "uncapped_liability": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "unlimited_license": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "rr": 0.25
+    },
+    "volume_restriction": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0833
+    },
+    "warranty_duration": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    }
+   },
+   "queries": 36
+  },
+  "keyword/name": {
+   "macro": {
+    "precision@5": 0.5167,
+    "recall@1": 0.5,
+    "recall@3": 0.8056,
+    "recall@5": 0.8333,
+    "rr": 0.6527
+   },
+   "micro": {
+    "precision@5": 0.5167,
+    "recall@1": 0.5,
+    "recall@3": 0.8056,
+    "recall@5": 0.8333,
+    "rr": 0.6527
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.1429
+    },
+    "affiliate_license_licensor": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0286
+    },
+    "anti_assignment": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0185
+    },
+    "audit_rights": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "cap_on_liability": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "change_of_control": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "competitive_restriction_exception": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0833
+    },
+    "covenant_not_to_sue": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.125
+    },
+    "exclusivity": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "governing_law": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "insurance": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "ip_ownership_assignment": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "joint_ip": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "license_grant": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "liquidated_damages": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "minimum_commitment": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "most_favored_nation": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "no_solicit_customers": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "no_solicit_employees": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_compete": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "non_disparagement": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "non_transferable_license": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "notice_to_end_renewal": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "perpetual_license": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "post_termination_services": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "price_restrictions": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "renewal_term": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "revenue_sharing": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "rofr": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "source_code_escrow": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "termination_for_convenience": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "third_party_beneficiary": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "uncapped_liability": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0667
+    },
+    "unlimited_license": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "rr": 0.2
+    },
+    "volume_restriction": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "warranty_duration": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    }
+   },
+   "queries": 36
+  },
+  "vector/cuad": {
+   "macro": {
+    "precision@5": 0.5222,
+    "recall@1": 0.5278,
+    "recall@3": 0.75,
+    "recall@5": 0.7778,
+    "rr": 0.6545
+   },
+   "micro": {
+    "precision@5": 0.5222,
+    "recall@1": 0.5278,
+    "recall@3": 0.75,
+    "recall@5": 0.7778,
+    "rr": 0.6545
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "affiliate_license_licensor": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0385
+    },
+    "anti_assignment": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "audit_rights": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "cap_on_liability": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "change_of_control": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "competitive_restriction_exception": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "covenant_not_to_sue": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "exclusivity": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "governing_law": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "insurance": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "ip_ownership_assignment": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.1429
+    },
+    "joint_ip": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "license_grant": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.125
+    },
+    "liquidated_damages": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "minimum_commitment": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "most_favored_nation": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0323
+    },
+    "no_solicit_customers": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "no_solicit_employees": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_compete": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_disparagement": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_transferable_license": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0556
+    },
+    "notice_to_end_renewal": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "rr": 0.25
+    },
+    "perpetual_license": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "post_termination_services": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "price_restrictions": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.1667
+    },
+    "renewal_term": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "revenue_sharing": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "rofr": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "source_code_escrow": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "termination_for_convenience": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "third_party_beneficiary": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "uncapped_liability": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "unlimited_license": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0018
+    },
+    "volume_restriction": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0833
+    },
+    "warranty_duration": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    }
+   },
+   "queries": 36
+  },
+  "vector/name": {
+   "macro": {
+    "precision@5": 0.5889,
+    "recall@1": 0.5833,
+    "recall@3": 0.8889,
+    "recall@5": 0.8889,
+    "rr": 0.7289
+   },
+   "micro": {
+    "precision@5": 0.5889,
+    "recall@1": 0.5833,
+    "recall@3": 0.8889,
+    "recall@5": 0.8889,
+    "rr": 0.7289
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "affiliate_license_licensor": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0149
+    },
+    "anti_assignment": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "audit_rights": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "cap_on_liability": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "change_of_control": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "competitive_restriction_exception": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "covenant_not_to_sue": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "exclusivity": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "governing_law": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "insurance": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "ip_ownership_assignment": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.3333
+    },
+    "joint_ip": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "license_grant": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "liquidated_damages": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "minimum_commitment": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "most_favored_nation": {
+     "precision@5": 0.2,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "no_solicit_customers": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "no_solicit_employees": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_compete": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_disparagement": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "non_transferable_license": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "notice_to_end_renewal": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "perpetual_license": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "post_termination_services": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "price_restrictions": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.1111
+    },
+    "renewal_term": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "revenue_sharing": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "rofr": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "source_code_escrow": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "termination_for_convenience": {
+     "precision@5": 0.6,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.5
+    },
+    "third_party_beneficiary": {
+     "precision@5": 0.4,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "uncapped_liability": {
+     "precision@5": 1.0,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    },
+    "unlimited_license": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.037
+    },
+    "volume_restriction": {
+     "precision@5": 0.0,
+     "queries": 1,
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "rr": 0.0769
+    },
+    "warranty_duration": {
+     "precision@5": 0.8,
+     "queries": 1,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 1.0
+    }
+   },
+   "queries": 36
+  }
+ },
+ "within_contract": {
+  "keyword/cuad": {
+   "macro": {
+    "recall@1": 0.3781,
+    "recall@3": 0.614,
+    "recall@5": 0.7047,
+    "rr": 0.5272
+   },
+   "micro": {
+    "recall@1": 0.426,
+    "recall@3": 0.6612,
+    "recall@5": 0.7544,
+    "rr": 0.5733
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "queries": 46,
+     "recall@1": 0.1304,
+     "recall@3": 0.3913,
+     "recall@5": 0.5435,
+     "rr": 0.3082
+    },
+    "affiliate_license_licensor": {
+     "queries": 15,
+     "recall@1": 0.1333,
+     "recall@3": 0.4667,
+     "recall@5": 0.6,
+     "rr": 0.3298
+    },
+    "anti_assignment": {
+     "queries": 299,
+     "recall@1": 0.6187,
+     "recall@3": 0.8294,
+     "recall@5": 0.9231,
+     "rr": 0.7463
+    },
+    "audit_rights": {
+     "queries": 167,
+     "recall@1": 0.6826,
+     "recall@3": 0.8144,
+     "recall@5": 0.8683,
+     "rr": 0.7714
+    },
+    "cap_on_liability": {
+     "queries": 224,
+     "recall@1": 0.5045,
+     "recall@3": 0.7143,
+     "recall@5": 0.8438,
+     "rr": 0.6395
+    },
+    "change_of_control": {
+     "queries": 91,
+     "recall@1": 0.5495,
+     "recall@3": 0.8462,
+     "recall@5": 0.9011,
+     "rr": 0.7047
+    },
+    "competitive_restriction_exception": {
+     "queries": 59,
+     "recall@1": 0.3051,
+     "recall@3": 0.4746,
+     "recall@5": 0.5424,
+     "rr": 0.4312
+    },
+    "covenant_not_to_sue": {
+     "queries": 79,
+     "recall@1": 0.2278,
+     "recall@3": 0.4937,
+     "recall@5": 0.6835,
+     "rr": 0.4178
+    },
+    "exclusivity": {
+     "queries": 147,
+     "recall@1": 0.1088,
+     "recall@3": 0.381,
+     "recall@5": 0.4898,
+     "rr": 0.2872
+    },
+    "governing_law": {
+     "queries": 350,
+     "recall@1": 0.6114,
+     "recall@3": 0.8514,
+     "recall@5": 0.9114,
+     "rr": 0.7379
+    },
+    "insurance": {
+     "queries": 131,
+     "recall@1": 0.3282,
+     "recall@3": 0.7176,
+     "recall@5": 0.7939,
+     "rr": 0.5359
+    },
+    "ip_ownership_assignment": {
+     "queries": 91,
+     "recall@1": 0.2308,
+     "recall@3": 0.4835,
+     "recall@5": 0.5824,
+     "rr": 0.4031
+    },
+    "joint_ip": {
+     "queries": 39,
+     "recall@1": 0.2564,
+     "recall@3": 0.5641,
+     "recall@5": 0.6154,
+     "rr": 0.4447
+    },
+    "license_grant": {
+     "queries": 202,
+     "recall@1": 0.2673,
+     "recall@3": 0.5248,
+     "recall@5": 0.6634,
+     "rr": 0.4515
+    },
+    "liquidated_damages": {
+     "queries": 47,
+     "recall@1": 0.383,
+     "recall@3": 0.617,
+     "recall@5": 0.7021,
+     "rr": 0.5304
+    },
+    "minimum_commitment": {
+     "queries": 130,
+     "recall@1": 0.3077,
+     "recall@3": 0.5692,
+     "recall@5": 0.6615,
+     "rr": 0.4819
+    },
+    "most_favored_nation": {
+     "queries": 23,
+     "recall@1": 0.2174,
+     "recall@3": 0.3478,
+     "recall@5": 0.4783,
+     "rr": 0.3428
+    },
+    "no_solicit_customers": {
+     "queries": 27,
+     "recall@1": 0.2963,
+     "recall@3": 0.5926,
+     "recall@5": 0.5926,
+     "rr": 0.4559
+    },
+    "no_solicit_employees": {
+     "queries": 46,
+     "recall@1": 0.3913,
+     "recall@3": 0.6522,
+     "recall@5": 0.7391,
+     "rr": 0.5486
+    },
+    "non_compete": {
+     "queries": 87,
+     "recall@1": 0.1034,
+     "recall@3": 0.2874,
+     "recall@5": 0.3908,
+     "rr": 0.2607
+    },
+    "non_disparagement": {
+     "queries": 29,
+     "recall@1": 0.2069,
+     "recall@3": 0.4138,
+     "recall@5": 0.5172,
+     "rr": 0.343
+    },
+    "non_transferable_license": {
+     "queries": 110,
+     "recall@1": 0.4364,
+     "recall@3": 0.6636,
+     "recall@5": 0.7636,
+     "rr": 0.5892
+    },
+    "notice_to_end_renewal": {
+     "queries": 89,
+     "recall@1": 0.5393,
+     "recall@3": 0.7079,
+     "recall@5": 0.809,
+     "rr": 0.6484
+    },
+    "perpetual_license": {
+     "queries": 56,
+     "recall@1": 0.5357,
+     "recall@3": 0.8036,
+     "recall@5": 0.875,
+     "rr": 0.6809
+    },
+    "post_termination_services": {
+     "queries": 143,
+     "recall@1": 0.3357,
+     "recall@3": 0.6224,
+     "recall@5": 0.7133,
+     "rr": 0.511
+    },
+    "price_restrictions": {
+     "queries": 12,
+     "recall@1": 0.25,
+     "recall@3": 0.5833,
+     "recall@5": 0.5833,
+     "rr": 0.416
+    },
+    "renewal_term": {
+     "queries": 146,
+     "recall@1": 0.5822,
+     "recall@3": 0.8219,
+     "recall@5": 0.8836,
+     "rr": 0.7162
+    },
+    "revenue_sharing": {
+     "queries": 132,
+     "recall@1": 0.1894,
+     "recall@3": 0.4015,
+     "recall@5": 0.5455,
+     "rr": 0.3506
+    },
+    "rofr": {
+     "queries": 63,
+     "recall@1": 0.4762,
+     "recall@3": 0.6825,
+     "recall@5": 0.8095,
+     "rr": 0.6119
+    },
+    "source_code_escrow": {
+     "queries": 9,
+     "recall@1": 0.8889,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.9444
+    },
+    "termination_for_convenience": {
+     "queries": 150,
+     "recall@1": 0.6467,
+     "recall@3": 0.8467,
+     "recall@5": 0.9267,
+     "rr": 0.761
+    },
+    "third_party_beneficiary": {
+     "queries": 22,
+     "recall@1": 0.4091,
+     "recall@3": 0.6818,
+     "recall@5": 0.8636,
+     "rr": 0.5813
+    },
+    "uncapped_liability": {
+     "queries": 90,
+     "recall@1": 0.5556,
+     "recall@3": 0.8111,
+     "recall@5": 0.8667,
+     "rr": 0.6955
+    },
+    "unlimited_license": {
+     "queries": 13,
+     "recall@1": 0.3846,
+     "recall@3": 0.5385,
+     "recall@5": 0.6154,
+     "rr": 0.512
+    },
+    "volume_restriction": {
+     "queries": 64,
+     "recall@1": 0.125,
+     "recall@3": 0.2344,
+     "recall@5": 0.3281,
+     "rr": 0.2363
+    },
+    "warranty_duration": {
+     "queries": 58,
+     "recall@1": 0.3966,
+     "recall@3": 0.6724,
+     "recall@5": 0.7414,
+     "rr": 0.5512
+    }
+   },
+   "queries": 3486
+  },
+  "keyword/name": {
+   "macro": {
+    "recall@1": 0.4586,
+    "recall@3": 0.6462,
+    "recall@5": 0.718,
+    "rr": 0.5799
+   },
+   "micro": {
+    "recall@1": 0.4971,
+    "recall@3": 0.6905,
+    "recall@5": 0.7676,
+    "rr": 0.6192
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "queries": 46,
+     "recall@1": 0.2609,
+     "recall@3": 0.4783,
+     "recall@5": 0.587,
+     "rr": 0.4124
+    },
+    "affiliate_license_licensor": {
+     "queries": 15,
+     "recall@1": 0.2,
+     "recall@3": 0.4667,
+     "recall@5": 0.5333,
+     "rr": 0.3562
+    },
+    "anti_assignment": {
+     "queries": 299,
+     "recall@1": 0.5518,
+     "recall@3": 0.7692,
+     "recall@5": 0.8361,
+     "rr": 0.6775
+    },
+    "audit_rights": {
+     "queries": 167,
+     "recall@1": 0.5749,
+     "recall@3": 0.6886,
+     "recall@5": 0.7305,
+     "rr": 0.6555
+    },
+    "cap_on_liability": {
+     "queries": 224,
+     "recall@1": 0.4866,
+     "recall@3": 0.7589,
+     "recall@5": 0.8304,
+     "rr": 0.6377
+    },
+    "change_of_control": {
+     "queries": 91,
+     "recall@1": 0.5165,
+     "recall@3": 0.7033,
+     "recall@5": 0.8132,
+     "rr": 0.6395
+    },
+    "competitive_restriction_exception": {
+     "queries": 59,
+     "recall@1": 0.2373,
+     "recall@3": 0.3559,
+     "recall@5": 0.4915,
+     "rr": 0.3494
+    },
+    "covenant_not_to_sue": {
+     "queries": 79,
+     "recall@1": 0.1392,
+     "recall@3": 0.2532,
+     "recall@5": 0.4304,
+     "rr": 0.2732
+    },
+    "exclusivity": {
+     "queries": 147,
+     "recall@1": 0.3265,
+     "recall@3": 0.5646,
+     "recall@5": 0.6803,
+     "rr": 0.4806
+    },
+    "governing_law": {
+     "queries": 350,
+     "recall@1": 0.6571,
+     "recall@3": 0.8143,
+     "recall@5": 0.8571,
+     "rr": 0.7506
+    },
+    "insurance": {
+     "queries": 131,
+     "recall@1": 0.9313,
+     "recall@3": 0.9695,
+     "recall@5": 0.9924,
+     "rr": 0.952
+    },
+    "ip_ownership_assignment": {
+     "queries": 91,
+     "recall@1": 0.3077,
+     "recall@3": 0.5055,
+     "recall@5": 0.6703,
+     "rr": 0.4564
+    },
+    "joint_ip": {
+     "queries": 39,
+     "recall@1": 0.359,
+     "recall@3": 0.641,
+     "recall@5": 0.6923,
+     "rr": 0.5272
+    },
+    "license_grant": {
+     "queries": 202,
+     "recall@1": 0.5792,
+     "recall@3": 0.8119,
+     "recall@5": 0.9208,
+     "rr": 0.7175
+    },
+    "liquidated_damages": {
+     "queries": 47,
+     "recall@1": 0.5106,
+     "recall@3": 0.5319,
+     "recall@5": 0.617,
+     "rr": 0.5647
+    },
+    "minimum_commitment": {
+     "queries": 130,
+     "recall@1": 0.5923,
+     "recall@3": 0.7462,
+     "recall@5": 0.8385,
+     "rr": 0.6931
+    },
+    "most_favored_nation": {
+     "queries": 23,
+     "recall@1": 0.1304,
+     "recall@3": 0.2174,
+     "recall@5": 0.3043,
+     "rr": 0.254
+    },
+    "no_solicit_customers": {
+     "queries": 27,
+     "recall@1": 0.5185,
+     "recall@3": 0.7778,
+     "recall@5": 0.8519,
+     "rr": 0.6571
+    },
+    "no_solicit_employees": {
+     "queries": 46,
+     "recall@1": 0.6304,
+     "recall@3": 0.8261,
+     "recall@5": 0.8696,
+     "rr": 0.7391
+    },
+    "non_compete": {
+     "queries": 87,
+     "recall@1": 0.2069,
+     "recall@3": 0.4943,
+     "recall@5": 0.5747,
+     "rr": 0.3786
+    },
+    "non_disparagement": {
+     "queries": 29,
+     "recall@1": 0.2414,
+     "recall@3": 0.3103,
+     "recall@5": 0.3448,
+     "rr": 0.3321
+    },
+    "non_transferable_license": {
+     "queries": 110,
+     "recall@1": 0.7545,
+     "recall@3": 0.8455,
+     "recall@5": 0.8818,
+     "rr": 0.81
+    },
+    "notice_to_end_renewal": {
+     "queries": 89,
+     "recall@1": 0.5506,
+     "recall@3": 0.7978,
+     "recall@5": 0.8652,
+     "rr": 0.692
+    },
+    "perpetual_license": {
+     "queries": 56,
+     "recall@1": 0.9107,
+     "recall@3": 0.9286,
+     "recall@5": 0.9464,
+     "rr": 0.9322
+    },
+    "post_termination_services": {
+     "queries": 143,
+     "recall@1": 0.3007,
+     "recall@3": 0.6364,
+     "recall@5": 0.7483,
+     "rr": 0.5051
+    },
+    "price_restrictions": {
+     "queries": 12,
+     "recall@1": 0.4167,
+     "recall@3": 0.5833,
+     "recall@5": 0.5833,
+     "rr": 0.5228
+    },
+    "renewal_term": {
+     "queries": 146,
+     "recall@1": 0.7123,
+     "recall@3": 0.9041,
+     "recall@5": 0.9384,
+     "rr": 0.8113
+    },
+    "revenue_sharing": {
+     "queries": 132,
+     "recall@1": 0.2045,
+     "recall@3": 0.447,
+     "recall@5": 0.5379,
+     "rr": 0.3689
+    },
+    "rofr": {
+     "queries": 63,
+     "recall@1": 0.0476,
+     "recall@3": 0.1111,
+     "recall@5": 0.2063,
+     "rr": 0.1479
+    },
+    "source_code_escrow": {
+     "queries": 9,
+     "recall@1": 0.8889,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.9259
+    },
+    "termination_for_convenience": {
+     "queries": 150,
+     "recall@1": 0.44,
+     "recall@3": 0.72,
+     "recall@5": 0.8467,
+     "rr": 0.6056
+    },
+    "third_party_beneficiary": {
+     "queries": 22,
+     "recall@1": 0.6818,
+     "recall@3": 0.9545,
+     "recall@5": 0.9545,
+     "rr": 0.8059
+    },
+    "uncapped_liability": {
+     "queries": 90,
+     "recall@1": 0.6111,
+     "recall@3": 0.8222,
+     "recall@5": 0.8667,
+     "rr": 0.7292
+    },
+    "unlimited_license": {
+     "queries": 13,
+     "recall@1": 0.5385,
+     "recall@3": 0.9231,
+     "recall@5": 0.9231,
+     "rr": 0.7265
+    },
+    "volume_restriction": {
+     "queries": 64,
+     "recall@1": 0.0625,
+     "recall@3": 0.2656,
+     "recall@5": 0.375,
+     "rr": 0.2261
+    },
+    "warranty_duration": {
+     "queries": 58,
+     "recall@1": 0.431,
+     "recall@3": 0.6379,
+     "recall@5": 0.7069,
+     "rr": 0.5638
+    }
+   },
+   "queries": 3486
+  },
+  "vector/cuad": {
+   "macro": {
+    "recall@1": 0.3255,
+    "recall@3": 0.5264,
+    "recall@5": 0.6338,
+    "rr": 0.4677
+   },
+   "micro": {
+    "recall@1": 0.3569,
+    "recall@3": 0.5743,
+    "recall@5": 0.6816,
+    "rr": 0.5044
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "queries": 46,
+     "recall@1": 0.2609,
+     "recall@3": 0.5217,
+     "recall@5": 0.6304,
+     "rr": 0.4391
+    },
+    "affiliate_license_licensor": {
+     "queries": 15,
+     "recall@1": 0.0667,
+     "recall@3": 0.4,
+     "recall@5": 0.4,
+     "rr": 0.2393
+    },
+    "anti_assignment": {
+     "queries": 299,
+     "recall@1": 0.495,
+     "recall@3": 0.7559,
+     "recall@5": 0.8763,
+     "rr": 0.6531
+    },
+    "audit_rights": {
+     "queries": 167,
+     "recall@1": 0.503,
+     "recall@3": 0.7066,
+     "recall@5": 0.7665,
+     "rr": 0.6271
+    },
+    "cap_on_liability": {
+     "queries": 224,
+     "recall@1": 0.567,
+     "recall@3": 0.7812,
+     "recall@5": 0.8705,
+     "rr": 0.6947
+    },
+    "change_of_control": {
+     "queries": 91,
+     "recall@1": 0.4176,
+     "recall@3": 0.6813,
+     "recall@5": 0.7692,
+     "rr": 0.5819
+    },
+    "competitive_restriction_exception": {
+     "queries": 59,
+     "recall@1": 0.2712,
+     "recall@3": 0.3898,
+     "recall@5": 0.4915,
+     "rr": 0.3791
+    },
+    "covenant_not_to_sue": {
+     "queries": 79,
+     "recall@1": 0.0759,
+     "recall@3": 0.2658,
+     "recall@5": 0.3671,
+     "rr": 0.234
+    },
+    "exclusivity": {
+     "queries": 147,
+     "recall@1": 0.1497,
+     "recall@3": 0.3265,
+     "recall@5": 0.4082,
+     "rr": 0.2887
+    },
+    "governing_law": {
+     "queries": 350,
+     "recall@1": 0.3829,
+     "recall@3": 0.6686,
+     "recall@5": 0.7743,
+     "rr": 0.5536
+    },
+    "insurance": {
+     "queries": 131,
+     "recall@1": 0.6565,
+     "recall@3": 0.8168,
+     "recall@5": 0.8779,
+     "rr": 0.7577
+    },
+    "ip_ownership_assignment": {
+     "queries": 91,
+     "recall@1": 0.2637,
+     "recall@3": 0.4725,
+     "recall@5": 0.6044,
+     "rr": 0.4193
+    },
+    "joint_ip": {
+     "queries": 39,
+     "recall@1": 0.3077,
+     "recall@3": 0.5385,
+     "recall@5": 0.6154,
+     "rr": 0.455
+    },
+    "license_grant": {
+     "queries": 202,
+     "recall@1": 0.0792,
+     "recall@3": 0.2772,
+     "recall@5": 0.4802,
+     "rr": 0.2558
+    },
+    "liquidated_damages": {
+     "queries": 47,
+     "recall@1": 0.383,
+     "recall@3": 0.5745,
+     "recall@5": 0.6383,
+     "rr": 0.5118
+    },
+    "minimum_commitment": {
+     "queries": 130,
+     "recall@1": 0.2308,
+     "recall@3": 0.4462,
+     "recall@5": 0.5692,
+     "rr": 0.3825
+    },
+    "most_favored_nation": {
+     "queries": 23,
+     "recall@1": 0.1739,
+     "recall@3": 0.3478,
+     "recall@5": 0.4348,
+     "rr": 0.3072
+    },
+    "no_solicit_customers": {
+     "queries": 27,
+     "recall@1": 0.1852,
+     "recall@3": 0.4444,
+     "recall@5": 0.6296,
+     "rr": 0.3643
+    },
+    "no_solicit_employees": {
+     "queries": 46,
+     "recall@1": 0.7174,
+     "recall@3": 0.8043,
+     "recall@5": 0.8478,
+     "rr": 0.7765
+    },
+    "non_compete": {
+     "queries": 87,
+     "recall@1": 0.2299,
+     "recall@3": 0.4253,
+     "recall@5": 0.5747,
+     "rr": 0.3871
+    },
+    "non_disparagement": {
+     "queries": 29,
+     "recall@1": 0.2069,
+     "recall@3": 0.2414,
+     "recall@5": 0.4138,
+     "rr": 0.2982
+    },
+    "non_transferable_license": {
+     "queries": 110,
+     "recall@1": 0.1182,
+     "recall@3": 0.2727,
+     "recall@5": 0.3727,
+     "rr": 0.2668
+    },
+    "notice_to_end_renewal": {
+     "queries": 89,
+     "recall@1": 0.5169,
+     "recall@3": 0.7303,
+     "recall@5": 0.7978,
+     "rr": 0.6548
+    },
+    "perpetual_license": {
+     "queries": 56,
+     "recall@1": 0.1607,
+     "recall@3": 0.3571,
+     "recall@5": 0.5179,
+     "rr": 0.3189
+    },
+    "post_termination_services": {
+     "queries": 143,
+     "recall@1": 0.3007,
+     "recall@3": 0.6014,
+     "recall@5": 0.7413,
+     "rr": 0.4831
+    },
+    "price_restrictions": {
+     "queries": 12,
+     "recall@1": 0.25,
+     "recall@3": 0.3333,
+     "recall@5": 0.5,
+     "rr": 0.3731
+    },
+    "renewal_term": {
+     "queries": 146,
+     "recall@1": 0.5548,
+     "recall@3": 0.7466,
+     "recall@5": 0.8425,
+     "rr": 0.6765
+    },
+    "revenue_sharing": {
+     "queries": 132,
+     "recall@1": 0.2121,
+     "recall@3": 0.3939,
+     "recall@5": 0.5455,
+     "rr": 0.3678
+    },
+    "rofr": {
+     "queries": 63,
+     "recall@1": 0.2381,
+     "recall@3": 0.3651,
+     "recall@5": 0.4603,
+     "rr": 0.3626
+    },
+    "source_code_escrow": {
+     "queries": 9,
+     "recall@1": 0.7778,
+     "recall@3": 0.8889,
+     "recall@5": 1.0,
+     "rr": 0.8611
+    },
+    "termination_for_convenience": {
+     "queries": 150,
+     "recall@1": 0.4733,
+     "recall@3": 0.7867,
+     "recall@5": 0.86,
+     "rr": 0.644
+    },
+    "third_party_beneficiary": {
+     "queries": 22,
+     "recall@1": 0.3636,
+     "recall@3": 0.5909,
+     "recall@5": 0.7727,
+     "rr": 0.5235
+    },
+    "uncapped_liability": {
+     "queries": 90,
+     "recall@1": 0.4889,
+     "recall@3": 0.7667,
+     "recall@5": 0.8667,
+     "rr": 0.6487
+    },
+    "unlimited_license": {
+     "queries": 13,
+     "recall@1": 0.0769,
+     "recall@3": 0.3846,
+     "recall@5": 0.5385,
+     "rr": 0.2644
+    },
+    "volume_restriction": {
+     "queries": 64,
+     "recall@1": 0.0625,
+     "recall@3": 0.1406,
+     "recall@5": 0.2031,
+     "rr": 0.1605
+    },
+    "warranty_duration": {
+     "queries": 58,
+     "recall@1": 0.5,
+     "recall@3": 0.7069,
+     "recall@5": 0.7586,
+     "rr": 0.6264
+    }
+   },
+   "queries": 3486
+  },
+  "vector/name": {
+   "macro": {
+    "recall@1": 0.409,
+    "recall@3": 0.605,
+    "recall@5": 0.699,
+    "rr": 0.5413
+   },
+   "micro": {
+    "recall@1": 0.4461,
+    "recall@3": 0.6566,
+    "recall@5": 0.7496,
+    "rr": 0.5813
+   },
+   "per_type": {
+    "affiliate_license_licensee": {
+     "queries": 46,
+     "recall@1": 0.2609,
+     "recall@3": 0.5435,
+     "recall@5": 0.6739,
+     "rr": 0.4459
+    },
+    "affiliate_license_licensor": {
+     "queries": 15,
+     "recall@1": 0.0667,
+     "recall@3": 0.2667,
+     "recall@5": 0.4,
+     "rr": 0.2199
+    },
+    "anti_assignment": {
+     "queries": 299,
+     "recall@1": 0.6087,
+     "recall@3": 0.7926,
+     "recall@5": 0.8562,
+     "rr": 0.7186
+    },
+    "audit_rights": {
+     "queries": 167,
+     "recall@1": 0.5389,
+     "recall@3": 0.6946,
+     "recall@5": 0.7964,
+     "rr": 0.6446
+    },
+    "cap_on_liability": {
+     "queries": 224,
+     "recall@1": 0.6339,
+     "recall@3": 0.875,
+     "recall@5": 0.9196,
+     "rr": 0.7559
+    },
+    "change_of_control": {
+     "queries": 91,
+     "recall@1": 0.3407,
+     "recall@3": 0.6154,
+     "recall@5": 0.7253,
+     "rr": 0.5085
+    },
+    "competitive_restriction_exception": {
+     "queries": 59,
+     "recall@1": 0.1864,
+     "recall@3": 0.3729,
+     "recall@5": 0.4915,
+     "rr": 0.3333
+    },
+    "covenant_not_to_sue": {
+     "queries": 79,
+     "recall@1": 0.0886,
+     "recall@3": 0.2152,
+     "recall@5": 0.3544,
+     "rr": 0.226
+    },
+    "exclusivity": {
+     "queries": 147,
+     "recall@1": 0.2109,
+     "recall@3": 0.415,
+     "recall@5": 0.5578,
+     "rr": 0.3592
+    },
+    "governing_law": {
+     "queries": 350,
+     "recall@1": 0.3314,
+     "recall@3": 0.5886,
+     "recall@5": 0.7114,
+     "rr": 0.496
+    },
+    "insurance": {
+     "queries": 131,
+     "recall@1": 0.8321,
+     "recall@3": 0.916,
+     "recall@5": 0.9389,
+     "rr": 0.8824
+    },
+    "ip_ownership_assignment": {
+     "queries": 91,
+     "recall@1": 0.3736,
+     "recall@3": 0.6484,
+     "recall@5": 0.7363,
+     "rr": 0.5424
+    },
+    "joint_ip": {
+     "queries": 39,
+     "recall@1": 0.4359,
+     "recall@3": 0.6923,
+     "recall@5": 0.8205,
+     "rr": 0.6016
+    },
+    "license_grant": {
+     "queries": 202,
+     "recall@1": 0.5297,
+     "recall@3": 0.7723,
+     "recall@5": 0.8713,
+     "rr": 0.6801
+    },
+    "liquidated_damages": {
+     "queries": 47,
+     "recall@1": 0.4255,
+     "recall@3": 0.5532,
+     "recall@5": 0.617,
+     "rr": 0.5277
+    },
+    "minimum_commitment": {
+     "queries": 130,
+     "recall@1": 0.2769,
+     "recall@3": 0.4692,
+     "recall@5": 0.6077,
+     "rr": 0.4232
+    },
+    "most_favored_nation": {
+     "queries": 23,
+     "recall@1": 0.1304,
+     "recall@3": 0.1739,
+     "recall@5": 0.3043,
+     "rr": 0.2184
+    },
+    "no_solicit_customers": {
+     "queries": 27,
+     "recall@1": 0.3704,
+     "recall@3": 0.5556,
+     "recall@5": 0.7407,
+     "rr": 0.5158
+    },
+    "no_solicit_employees": {
+     "queries": 46,
+     "recall@1": 0.7609,
+     "recall@3": 0.8478,
+     "recall@5": 0.9348,
+     "rr": 0.8218
+    },
+    "non_compete": {
+     "queries": 87,
+     "recall@1": 0.3563,
+     "recall@3": 0.5402,
+     "recall@5": 0.6897,
+     "rr": 0.502
+    },
+    "non_disparagement": {
+     "queries": 29,
+     "recall@1": 0.2069,
+     "recall@3": 0.4138,
+     "recall@5": 0.4828,
+     "rr": 0.3366
+    },
+    "non_transferable_license": {
+     "queries": 110,
+     "recall@1": 0.3,
+     "recall@3": 0.5909,
+     "recall@5": 0.7273,
+     "rr": 0.4888
+    },
+    "notice_to_end_renewal": {
+     "queries": 89,
+     "recall@1": 0.6292,
+     "recall@3": 0.7865,
+     "recall@5": 0.9101,
+     "rr": 0.7375
+    },
+    "perpetual_license": {
+     "queries": 56,
+     "recall@1": 0.4107,
+     "recall@3": 0.5536,
+     "recall@5": 0.6786,
+     "rr": 0.5294
+    },
+    "post_termination_services": {
+     "queries": 143,
+     "recall@1": 0.3776,
+     "recall@3": 0.6993,
+     "recall@5": 0.7832,
+     "rr": 0.5576
+    },
+    "price_restrictions": {
+     "queries": 12,
+     "recall@1": 0.25,
+     "recall@3": 0.5,
+     "recall@5": 0.5833,
+     "rr": 0.4178
+    },
+    "renewal_term": {
+     "queries": 146,
+     "recall@1": 0.6233,
+     "recall@3": 0.8356,
+     "recall@5": 0.8973,
+     "rr": 0.7436
+    },
+    "revenue_sharing": {
+     "queries": 132,
+     "recall@1": 0.4242,
+     "recall@3": 0.6515,
+     "recall@5": 0.7424,
+     "rr": 0.5695
+    },
+    "rofr": {
+     "queries": 63,
+     "recall@1": 0.0635,
+     "recall@3": 0.0952,
+     "recall@5": 0.1587,
+     "rr": 0.1375
+    },
+    "source_code_escrow": {
+     "queries": 9,
+     "recall@1": 0.8889,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "rr": 0.9444
+    },
+    "termination_for_convenience": {
+     "queries": 150,
+     "recall@1": 0.48,
+     "recall@3": 0.84,
+     "recall@5": 0.8867,
+     "rr": 0.6609
+    },
+    "third_party_beneficiary": {
+     "queries": 22,
+     "recall@1": 0.4545,
+     "recall@3": 0.7273,
+     "recall@5": 0.8182,
+     "rr": 0.6152
+    },
+    "uncapped_liability": {
+     "queries": 90,
+     "recall@1": 0.7222,
+     "recall@3": 0.8889,
+     "recall@5": 0.9222,
+     "rr": 0.8152
+    },
+    "unlimited_license": {
+     "queries": 13,
+     "recall@1": 0.3846,
+     "recall@3": 0.6923,
+     "recall@5": 0.6923,
+     "rr": 0.5555
+    },
+    "volume_restriction": {
+     "queries": 64,
+     "recall@1": 0.0938,
+     "recall@3": 0.25,
+     "recall@5": 0.375,
+     "rr": 0.2456
+    },
+    "warranty_duration": {
+     "queries": 58,
+     "recall@1": 0.6552,
+     "recall@3": 0.7069,
+     "recall@5": 0.7586,
+     "rr": 0.708
+    }
+   },
+   "queries": 3486
+  }
+ }
+}
