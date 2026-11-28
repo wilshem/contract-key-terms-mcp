@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import ClassVar
 
 MODEL_PATH = Path(__file__).parent / "models" / "key_terms_model.json.gz"
-MODEL_SHA256 = "216c8391a754ef46627ff9b7860f3e34b80951890744e564c80a7984d80ef13b"
+MODEL_SHA256 = "2119001a06c9df6c5d8f5e7cf8f18ff3fd1c160415d31f6cd673c845e0034674"
 
 
 class ModelIntegrityError(RuntimeError):

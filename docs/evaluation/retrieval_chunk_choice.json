@@ -1,0 +1,3271 @@
+{
+ "chosen": 256,
+ "dev": {
+  "64": {
+   "chunk_words_max": 72,
+   "chunk_words_mean": 49.3,
+   "chunks": 19537,
+   "embed_seconds": 440.8,
+   "truncated_chunks": 19537,
+   "within_contract": {
+    "keyword/cuad": {
+     "macro": {
+      "recall@1": 0.233,
+      "recall@3": 0.3692,
+      "recall@5": 0.4423,
+      "rr": 0.3361
+     },
+     "micro": {
+      "recall@1": 0.2976,
+      "recall@3": 0.4491,
+      "recall@5": 0.5141,
+      "rr": 0.4042
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3077,
+       "recall@3": 0.3846,
+       "recall@5": 0.5385,
+       "rr": 0.4072
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.125,
+       "rr": 0.0843
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5467,
+       "recall@3": 0.7467,
+       "recall@5": 0.7867,
+       "rr": 0.6704
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.5106,
+       "recall@3": 0.6596,
+       "recall@5": 0.766,
+       "rr": 0.6148
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.3333,
+       "recall@3": 0.6667,
+       "recall@5": 0.7255,
+       "rr": 0.5043
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.3667,
+       "recall@3": 0.6667,
+       "recall@5": 0.7333,
+       "rr": 0.5321
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.0588,
+       "recall@5": 0.0588,
+       "rr": 0.1121
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.2381,
+       "recall@3": 0.2857,
+       "recall@5": 0.3333,
+       "rr": 0.3066
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.0606,
+       "recall@3": 0.0909,
+       "recall@5": 0.1515,
+       "rr": 0.1277
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.7126,
+       "recall@3": 0.8276,
+       "recall@5": 0.8966,
+       "rr": 0.7873
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.2571,
+       "recall@3": 0.4286,
+       "recall@5": 0.4286,
+       "rr": 0.3669
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.0,
+       "recall@3": 0.1515,
+       "recall@5": 0.2121,
+       "rr": 0.1259
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.2389
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.0377,
+       "recall@3": 0.1698,
+       "recall@5": 0.2264,
+       "rr": 0.1517
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.2857,
+       "recall@5": 0.4286,
+       "rr": 0.3432
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.1143,
+       "recall@3": 0.2571,
+       "recall@5": 0.2857,
+       "rr": 0.211
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.2,
+       "recall@3": 0.4,
+       "recall@5": 0.4,
+       "rr": 0.354
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.0,
+       "recall@3": 0.1429,
+       "recall@5": 0.2857,
+       "rr": 0.0863
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.3077,
+       "recall@3": 0.4615,
+       "recall@5": 0.7692,
+       "rr": 0.4446
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.0,
+       "recall@3": 0.1875,
+       "recall@5": 0.2188,
+       "rr": 0.1258
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.2222,
+       "recall@5": 0.2222,
+       "rr": 0.251
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.2857,
+       "recall@3": 0.4286,
+       "recall@5": 0.4286,
+       "rr": 0.3813
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.2727,
+       "recall@3": 0.5,
+       "recall@5": 0.6364,
+       "rr": 0.4118
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.5,
+       "recall@3": 0.5714,
+       "recall@5": 0.7143,
+       "rr": 0.5796
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.1282,
+       "recall@3": 0.2821,
+       "recall@5": 0.4103,
+       "rr": 0.2569
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.3333,
+       "rr": 0.0766
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6,
+       "recall@3": 0.7,
+       "recall@5": 0.7333,
+       "rr": 0.667
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.0294,
+       "recall@3": 0.1471,
+       "recall@5": 0.1471,
+       "rr": 0.1098
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.2727,
+       "recall@3": 0.5,
+       "recall@5": 0.5455,
+       "rr": 0.3962
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.25,
+       "recall@3": 0.5,
+       "recall@5": 0.5,
+       "rr": 0.4086
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.4848,
+       "recall@3": 0.6667,
+       "recall@5": 0.8182,
+       "rr": 0.6082
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.4,
+       "recall@3": 0.5,
+       "recall@5": 0.5,
+       "rr": 0.4904
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.2857,
+       "recall@3": 0.5714,
+       "recall@5": 0.619,
+       "rr": 0.4436
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.25,
+       "rr": 0.1117
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0556,
+       "rr": 0.0344
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.1765,
+       "recall@3": 0.2941,
+       "recall@5": 0.3529,
+       "rr": 0.2765
+      }
+     },
+     "queries": 924
+    },
+    "keyword/name": {
+     "macro": {
+      "recall@1": 0.3529,
+      "recall@3": 0.4678,
+      "recall@5": 0.5296,
+      "rr": 0.4357
+     },
+     "micro": {
+      "recall@1": 0.368,
+      "recall@3": 0.5065,
+      "recall@5": 0.5714,
+      "rr": 0.4628
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.2308,
+       "recall@3": 0.2308,
+       "recall@5": 0.4615,
+       "rr": 0.3147
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.375,
+       "rr": 0.1406
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.4533,
+       "recall@3": 0.6133,
+       "recall@5": 0.7333,
+       "rr": 0.5624
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.4255,
+       "recall@3": 0.6383,
+       "recall@5": 0.6596,
+       "rr": 0.5387
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.2941,
+       "recall@3": 0.4902,
+       "recall@5": 0.6275,
+       "rr": 0.4286
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.5333,
+       "recall@3": 0.6333,
+       "recall@5": 0.6333,
+       "rr": 0.5969
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0,
+       "recall@3": 0.0588,
+       "recall@5": 0.0588,
+       "rr": 0.0608
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.0952,
+       "recall@3": 0.1905,
+       "recall@5": 0.1905,
+       "rr": 0.1774
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1212,
+       "recall@3": 0.2121,
+       "recall@5": 0.2424,
+       "rr": 0.1986
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.6437,
+       "recall@3": 0.7241,
+       "recall@5": 0.7586,
+       "rr": 0.701
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.8571,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.919
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.0606,
+       "recall@3": 0.1515,
+       "recall@5": 0.2727,
+       "rr": 0.1516
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.7143,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.7299
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.3962,
+       "recall@3": 0.6792,
+       "recall@5": 0.7736,
+       "rr": 0.5688
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.3571,
+       "recall@3": 0.3571,
+       "recall@5": 0.3571,
+       "rr": 0.3672
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.3714,
+       "recall@3": 0.5714,
+       "recall@5": 0.6286,
+       "rr": 0.4925
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.4,
+       "recall@5": 0.4,
+       "rr": 0.4223
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.1429,
+       "recall@5": 0.2857,
+       "rr": 0.199
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.4615,
+       "recall@3": 0.6923,
+       "recall@5": 0.7692,
+       "rr": 0.5767
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.1562,
+       "recall@3": 0.25,
+       "recall@5": 0.2812,
+       "rr": 0.2331
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.2222,
+       "recall@5": 0.2222,
+       "rr": 0.2385
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.5357,
+       "recall@3": 0.6786,
+       "recall@5": 0.7143,
+       "rr": 0.617
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.5,
+       "recall@3": 0.8182,
+       "recall@5": 0.9545,
+       "rr": 0.6815
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.9286,
+       "recall@3": 0.9286,
+       "recall@5": 0.9286,
+       "rr": 0.932
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.1282,
+       "recall@3": 0.3077,
+       "recall@5": 0.4359,
+       "rr": 0.2719
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0134
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6,
+       "recall@3": 0.8333,
+       "recall@5": 0.8333,
+       "rr": 0.716
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1471,
+       "recall@3": 0.2647,
+       "recall@5": 0.3235,
+       "rr": 0.2354
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0157
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.875
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.2121,
+       "recall@3": 0.3636,
+       "recall@5": 0.4545,
+       "rr": 0.3284
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.6,
+       "recall@3": 0.6,
+       "recall@5": 0.8,
+       "rr": 0.6578
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.381,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.5373
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.8333
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.1667,
+       "rr": 0.0691
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2353,
+       "recall@3": 0.2353,
+       "recall@5": 0.2941,
+       "rr": 0.2838
+      }
+     },
+     "queries": 924
+    },
+    "vector/cuad": {
+     "macro": {
+      "recall@1": 0.3128,
+      "recall@3": 0.4669,
+      "recall@5": 0.5375,
+      "rr": 0.4252
+     },
+     "micro": {
+      "recall@1": 0.3604,
+      "recall@3": 0.5184,
+      "recall@5": 0.5887,
+      "rr": 0.4729
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3846,
+       "recall@3": 0.5385,
+       "recall@5": 0.6154,
+       "rr": 0.4885
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.25,
+       "rr": 0.118
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.72,
+       "recall@3": 0.8267,
+       "recall@5": 0.84,
+       "rr": 0.7892
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.4043,
+       "recall@3": 0.766,
+       "recall@5": 0.8085,
+       "rr": 0.595
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.5294,
+       "recall@3": 0.6471,
+       "recall@5": 0.7059,
+       "rr": 0.6188
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.3333,
+       "recall@3": 0.5667,
+       "recall@5": 0.6333,
+       "rr": 0.4635
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.1765,
+       "recall@5": 0.2353,
+       "rr": 0.1638
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.1429,
+       "recall@3": 0.3333,
+       "recall@5": 0.381,
+       "rr": 0.2739
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1212,
+       "recall@3": 0.2121,
+       "recall@5": 0.2424,
+       "rr": 0.2063
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.6667,
+       "recall@3": 0.7931,
+       "recall@5": 0.8621,
+       "rr": 0.7526
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.6571,
+       "recall@3": 0.8,
+       "recall@5": 0.8857,
+       "rr": 0.7588
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.0909,
+       "recall@3": 0.2424,
+       "recall@5": 0.2424,
+       "rr": 0.2007
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.7143,
+       "recall@5": 0.8571,
+       "rr": 0.55
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.0755,
+       "recall@3": 0.2264,
+       "recall@5": 0.2642,
+       "rr": 0.2014
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2143,
+       "recall@3": 0.2857,
+       "recall@5": 0.3571,
+       "rr": 0.2879
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.1714,
+       "recall@3": 0.2857,
+       "recall@5": 0.4,
+       "rr": 0.2715
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.6,
+       "recall@3": 0.6,
+       "recall@5": 0.6,
+       "rr": 0.6298
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.0,
+       "recall@3": 0.1429,
+       "recall@5": 0.2857,
+       "rr": 0.1524
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.5385,
+       "recall@3": 0.6923,
+       "recall@5": 0.7692,
+       "rr": 0.6347
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.1562,
+       "recall@3": 0.4062,
+       "recall@5": 0.5625,
+       "rr": 0.3347
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.0,
+       "recall@3": 0.1111,
+       "recall@5": 0.1111,
+       "rr": 0.0808
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.0714,
+       "recall@3": 0.2857,
+       "recall@5": 0.4643,
+       "rr": 0.2428
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.4545,
+       "recall@3": 0.7727,
+       "recall@5": 0.7727,
+       "rr": 0.6267
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.4286,
+       "recall@3": 0.5714,
+       "recall@5": 0.6429,
+       "rr": 0.5226
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.1795,
+       "recall@3": 0.3333,
+       "recall@5": 0.3846,
+       "rr": 0.2988
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.3333,
+       "recall@3": 0.6667,
+       "recall@5": 0.6667,
+       "rr": 0.5196
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6333,
+       "recall@3": 0.7667,
+       "recall@5": 0.8,
+       "rr": 0.7173
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1471,
+       "recall@3": 0.2941,
+       "recall@5": 0.4412,
+       "rr": 0.2744
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.3182,
+       "recall@3": 0.3182,
+       "recall@5": 0.4091,
+       "rr": 0.3626
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.775
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.3939,
+       "recall@3": 0.6364,
+       "recall@5": 0.8182,
+       "rr": 0.568
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.5,
+       "recall@3": 0.7,
+       "recall@5": 0.8,
+       "rr": 0.6304
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.6667,
+       "recall@3": 0.8095,
+       "recall@5": 0.9048,
+       "rr": 0.7551
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0313
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0324
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2353,
+       "recall@3": 0.4118,
+       "recall@5": 0.5882,
+       "rr": 0.3788
+      }
+     },
+     "queries": 924
+    },
+    "vector/name": {
+     "macro": {
+      "recall@1": 0.3715,
+      "recall@3": 0.5272,
+      "recall@5": 0.6219,
+      "rr": 0.4818
+     },
+     "micro": {
+      "recall@1": 0.4134,
+      "recall@3": 0.5866,
+      "recall@5": 0.6656,
+      "rr": 0.5285
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.2308,
+       "recall@3": 0.4615,
+       "recall@5": 0.6154,
+       "rr": 0.4062
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.375,
+       "rr": 0.1561
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.68,
+       "recall@3": 0.8,
+       "recall@5": 0.84,
+       "rr": 0.7573
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.4894,
+       "recall@3": 0.6809,
+       "recall@5": 0.7234,
+       "rr": 0.6095
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.5098,
+       "recall@3": 0.7255,
+       "recall@5": 0.7843,
+       "rr": 0.6302
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.2333,
+       "recall@3": 0.5667,
+       "recall@5": 0.6667,
+       "rr": 0.4171
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.1176,
+       "recall@3": 0.2941,
+       "recall@5": 0.4118,
+       "rr": 0.2622
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.0952,
+       "recall@3": 0.0952,
+       "recall@5": 0.1905,
+       "rr": 0.1545
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1212,
+       "recall@3": 0.1818,
+       "recall@5": 0.2424,
+       "rr": 0.2068
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.5977,
+       "recall@3": 0.7701,
+       "recall@5": 0.8391,
+       "rr": 0.7063
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.8571,
+       "recall@3": 0.9429,
+       "recall@5": 0.9429,
+       "rr": 0.9014
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.2121,
+       "recall@3": 0.3636,
+       "recall@5": 0.4848,
+       "rr": 0.3328
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.8571,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.9048
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.5472,
+       "recall@3": 0.7358,
+       "recall@5": 0.8302,
+       "rr": 0.6674
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2143,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.2748
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2571,
+       "recall@3": 0.3429,
+       "recall@5": 0.4,
+       "rr": 0.3434
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.4,
+       "recall@5": 0.4,
+       "rr": 0.4366
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.2166
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.5385,
+       "recall@3": 0.6923,
+       "recall@5": 0.7692,
+       "rr": 0.6492
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.2812,
+       "recall@3": 0.5312,
+       "recall@5": 0.6875,
+       "rr": 0.4635
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.1111,
+       "recall@3": 0.2222,
+       "recall@5": 0.2222,
+       "rr": 0.2134
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.3929,
+       "recall@3": 0.4643,
+       "recall@5": 0.5,
+       "rr": 0.4759
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.7273,
+       "recall@3": 0.8636,
+       "recall@5": 0.9545,
+       "rr": 0.8232
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.5,
+       "recall@3": 0.7857,
+       "recall@5": 0.8571,
+       "rr": 0.6476
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2051,
+       "recall@3": 0.4359,
+       "recall@5": 0.5641,
+       "rr": 0.3605
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.3333,
+       "recall@3": 0.6667,
+       "recall@5": 0.6667,
+       "rr": 0.4512
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.7,
+       "recall@3": 0.9333,
+       "recall@5": 0.9333,
+       "rr": 0.8048
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.0882,
+       "recall@3": 0.5294,
+       "recall@5": 0.6471,
+       "rr": 0.3268
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0455,
+       "rr": 0.0357
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 0.75,
+       "recall@5": 1.0,
+       "rr": 0.8125
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.2424,
+       "recall@3": 0.5758,
+       "recall@5": 0.7879,
+       "rr": 0.4467
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.8,
+       "recall@3": 0.8,
+       "recall@5": 0.8,
+       "rr": 0.8155
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.619,
+       "recall@3": 0.8571,
+       "recall@5": 0.9048,
+       "rr": 0.7355
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.75,
+       "rr": 0.1773
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.1111,
+       "recall@3": 0.1667,
+       "recall@5": 0.3333,
+       "rr": 0.1941
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.4118,
+       "recall@3": 0.6471,
+       "recall@5": 0.6471,
+       "rr": 0.5279
+      }
+     },
+     "queries": 924
+    }
+   }
+  },
+  "128": {
+   "chunk_words_max": 135,
+   "chunk_words_mean": 104.0,
+   "chunks": 9270,
+   "embed_seconds": 464.2,
+   "truncated_chunks": 9270,
+   "within_contract": {
+    "keyword/cuad": {
+     "macro": {
+      "recall@1": 0.2799,
+      "recall@3": 0.4246,
+      "recall@5": 0.5126,
+      "rr": 0.3939
+     },
+     "micro": {
+      "recall@1": 0.3474,
+      "recall@3": 0.5054,
+      "recall@5": 0.5909,
+      "rr": 0.4647
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.2308,
+       "recall@3": 0.6154,
+       "recall@5": 0.6154,
+       "rr": 0.4153
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.375,
+       "rr": 0.1651
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5733,
+       "recall@3": 0.8,
+       "recall@5": 0.84,
+       "rr": 0.7061
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.5957,
+       "recall@3": 0.8298,
+       "recall@5": 0.8511,
+       "rr": 0.7101
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.5098,
+       "recall@3": 0.7647,
+       "recall@5": 0.8431,
+       "rr": 0.6585
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.4667,
+       "recall@3": 0.7,
+       "recall@5": 0.7333,
+       "rr": 0.6044
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.1176,
+       "recall@3": 0.1176,
+       "recall@5": 0.1176,
+       "rr": 0.1678
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.2381,
+       "recall@3": 0.3333,
+       "recall@5": 0.4762,
+       "rr": 0.3563
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.0303,
+       "recall@3": 0.1212,
+       "recall@5": 0.1515,
+       "rr": 0.1394
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.7011,
+       "recall@3": 0.8621,
+       "recall@5": 0.931,
+       "rr": 0.7959
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.3429,
+       "recall@3": 0.4571,
+       "recall@5": 0.5429,
+       "rr": 0.4534
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.1515,
+       "recall@3": 0.2727,
+       "recall@5": 0.303,
+       "rr": 0.269
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.2217
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.1132,
+       "recall@3": 0.3019,
+       "recall@5": 0.4528,
+       "rr": 0.2847
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.3571,
+       "recall@5": 0.3571,
+       "rr": 0.3494
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.1429,
+       "recall@3": 0.3143,
+       "recall@5": 0.5429,
+       "rr": 0.2807
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.6,
+       "recall@3": 0.6,
+       "recall@5": 0.6,
+       "rr": 0.6145
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.0,
+       "recall@3": 0.1429,
+       "recall@5": 0.2857,
+       "rr": 0.1198
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.1538,
+       "recall@3": 0.4615,
+       "recall@5": 0.6154,
+       "rr": 0.3494
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.125,
+       "recall@3": 0.1562,
+       "recall@5": 0.1875,
+       "rr": 0.1899
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.3333,
+       "recall@5": 0.3333,
+       "rr": 0.3139
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.3214,
+       "recall@3": 0.5,
+       "recall@5": 0.5714,
+       "rr": 0.4218
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.3182,
+       "recall@3": 0.5455,
+       "recall@5": 0.7273,
+       "rr": 0.5051
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.5714,
+       "recall@3": 0.7143,
+       "recall@5": 0.7857,
+       "rr": 0.6491
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2051,
+       "recall@3": 0.3333,
+       "recall@5": 0.3846,
+       "rr": 0.3236
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.069
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.5333,
+       "recall@3": 0.7333,
+       "recall@5": 0.8333,
+       "rr": 0.6583
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1176,
+       "recall@3": 0.2059,
+       "recall@5": 0.2941,
+       "rr": 0.2059
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.3636,
+       "recall@3": 0.5,
+       "recall@5": 0.5909,
+       "rr": 0.4691
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.5,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.6458
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.5455,
+       "recall@3": 0.6364,
+       "recall@5": 0.8788,
+       "rr": 0.6506
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.3,
+       "recall@3": 0.3,
+       "recall@5": 0.5,
+       "rr": 0.3891
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.381,
+       "recall@3": 0.5714,
+       "recall@5": 0.6667,
+       "rr": 0.5051
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.5,
+       "rr": 0.1817
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0505
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.1765,
+       "recall@3": 0.2941,
+       "recall@5": 0.5294,
+       "rr": 0.2899
+      }
+     },
+     "queries": 924
+    },
+    "keyword/name": {
+     "macro": {
+      "recall@1": 0.3605,
+      "recall@3": 0.5121,
+      "recall@5": 0.585,
+      "rr": 0.4678
+     },
+     "micro": {
+      "recall@1": 0.4048,
+      "recall@3": 0.5574,
+      "recall@5": 0.6374,
+      "rr": 0.5116
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3077,
+       "recall@3": 0.3077,
+       "recall@5": 0.4615,
+       "rr": 0.3804
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.5,
+       "rr": 0.1554
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5333,
+       "recall@3": 0.6933,
+       "recall@5": 0.8,
+       "rr": 0.6339
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.5319,
+       "recall@3": 0.6383,
+       "recall@5": 0.6596,
+       "rr": 0.6072
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.3725,
+       "recall@3": 0.5294,
+       "recall@5": 0.7059,
+       "rr": 0.4982
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.5,
+       "recall@3": 0.6333,
+       "recall@5": 0.6333,
+       "rr": 0.5899
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.1765,
+       "recall@5": 0.1765,
+       "rr": 0.1502
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.0952,
+       "recall@3": 0.1905,
+       "recall@5": 0.3333,
+       "rr": 0.2118
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1818,
+       "recall@3": 0.303,
+       "recall@5": 0.4242,
+       "rr": 0.3014
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.6552,
+       "recall@3": 0.7816,
+       "recall@5": 0.8621,
+       "rr": 0.7408
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.8,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.8952
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.1212,
+       "recall@3": 0.2424,
+       "recall@5": 0.3636,
+       "rr": 0.2389
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.4286,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.5744
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.5094,
+       "recall@3": 0.7358,
+       "recall@5": 0.8868,
+       "rr": 0.6588
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.3571,
+       "recall@5": 0.3571,
+       "rr": 0.3398
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.4571,
+       "recall@3": 0.6571,
+       "recall@5": 0.6857,
+       "rr": 0.5621
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.4,
+       "recall@5": 0.4,
+       "rr": 0.4424
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.0,
+       "recall@3": 0.1429,
+       "recall@5": 0.2857,
+       "rr": 0.1435
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.4615,
+       "recall@3": 0.6923,
+       "recall@5": 0.7692,
+       "rr": 0.5958
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.125,
+       "recall@3": 0.3125,
+       "recall@5": 0.375,
+       "rr": 0.2481
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.3333,
+       "recall@5": 0.4444,
+       "rr": 0.3212
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.5714,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.6497
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.5909,
+       "recall@3": 0.8636,
+       "recall@5": 0.9091,
+       "rr": 0.7348
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.9286,
+       "recall@3": 0.9286,
+       "recall@5": 0.9286,
+       "rr": 0.9341
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.1795,
+       "recall@3": 0.3846,
+       "recall@5": 0.4872,
+       "rr": 0.3312
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0272
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6667,
+       "recall@3": 0.8667,
+       "recall@5": 0.9,
+       "rr": 0.7637
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1765,
+       "recall@3": 0.3235,
+       "recall@5": 0.3529,
+       "rr": 0.293
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0325
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.5,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.75
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.303,
+       "recall@3": 0.3939,
+       "recall@5": 0.5758,
+       "rr": 0.4153
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.6,
+       "recall@3": 0.7,
+       "recall@5": 0.8,
+       "rr": 0.6818
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.4286,
+       "recall@3": 0.7143,
+       "recall@5": 0.8571,
+       "rr": 0.5881
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.875
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.1667,
+       "recall@5": 0.1667,
+       "rr": 0.1302
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2353,
+       "recall@3": 0.4118,
+       "recall@5": 0.5294,
+       "rr": 0.3442
+      }
+     },
+     "queries": 924
+    },
+    "vector/cuad": {
+     "macro": {
+      "recall@1": 0.3327,
+      "recall@3": 0.4758,
+      "recall@5": 0.5538,
+      "rr": 0.4438
+     },
+     "micro": {
+      "recall@1": 0.3636,
+      "recall@3": 0.5249,
+      "recall@5": 0.6039,
+      "rr": 0.4813
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.4615,
+       "recall@3": 0.7692,
+       "recall@5": 0.8462,
+       "rr": 0.6351
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.375,
+       "rr": 0.152
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5333,
+       "recall@3": 0.8,
+       "recall@5": 0.84,
+       "rr": 0.6765
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.6383,
+       "recall@3": 0.7872,
+       "recall@5": 0.9149,
+       "rr": 0.7338
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.5098,
+       "recall@3": 0.7255,
+       "recall@5": 0.7647,
+       "rr": 0.6426
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.4,
+       "recall@3": 0.5333,
+       "recall@5": 0.6333,
+       "rr": 0.5124
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.1176,
+       "recall@3": 0.1176,
+       "recall@5": 0.2353,
+       "rr": 0.1899
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.1429,
+       "recall@3": 0.2381,
+       "recall@5": 0.5238,
+       "rr": 0.2802
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.2121,
+       "recall@3": 0.2424,
+       "recall@5": 0.2727,
+       "rr": 0.2773
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.5517,
+       "recall@3": 0.7586,
+       "recall@5": 0.8621,
+       "rr": 0.681
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.6857,
+       "recall@3": 0.8571,
+       "recall@5": 0.9143,
+       "rr": 0.777
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.0909,
+       "recall@3": 0.2121,
+       "recall@5": 0.2727,
+       "rr": 0.1949
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.7143,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.7413
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.1132,
+       "recall@3": 0.2453,
+       "recall@5": 0.3208,
+       "rr": 0.2518
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.1429,
+       "recall@3": 0.3571,
+       "recall@5": 0.3571,
+       "rr": 0.2686
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2,
+       "recall@3": 0.3143,
+       "recall@5": 0.3714,
+       "rr": 0.3013
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.8,
+       "recall@5": 0.8,
+       "rr": 0.5713
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.3405
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.6923,
+       "recall@3": 0.7692,
+       "recall@5": 0.7692,
+       "rr": 0.7525
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.2188,
+       "recall@3": 0.2812,
+       "recall@5": 0.3438,
+       "rr": 0.3004
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.1111,
+       "recall@3": 0.2222,
+       "recall@5": 0.2222,
+       "rr": 0.198
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.1071,
+       "recall@3": 0.3929,
+       "recall@5": 0.4643,
+       "rr": 0.287
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.5455,
+       "recall@3": 0.6818,
+       "recall@5": 0.7727,
+       "rr": 0.6566
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.3571,
+       "recall@3": 0.5,
+       "recall@5": 0.5714,
+       "rr": 0.4777
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2051,
+       "recall@3": 0.2821,
+       "recall@5": 0.4615,
+       "rr": 0.326
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.3333,
+       "recall@5": 0.6667,
+       "rr": 0.259
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6333,
+       "recall@3": 0.7667,
+       "recall@5": 0.8,
+       "rr": 0.7169
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1176,
+       "recall@3": 0.3824,
+       "recall@5": 0.4706,
+       "rr": 0.2723
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.1818,
+       "recall@3": 0.3636,
+       "recall@5": 0.4091,
+       "rr": 0.3117
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.753
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.303,
+       "recall@3": 0.6061,
+       "recall@5": 0.7273,
+       "rr": 0.4874
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.5,
+       "recall@3": 0.6,
+       "recall@5": 0.6,
+       "rr": 0.5741
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.7619,
+       "recall@3": 0.8571,
+       "recall@5": 0.9048,
+       "rr": 0.8194
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.033
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0556,
+       "recall@3": 0.1111,
+       "recall@5": 0.1111,
+       "rr": 0.1133
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2353,
+       "recall@3": 0.4706,
+       "recall@5": 0.5882,
+       "rr": 0.41
+      }
+     },
+     "queries": 924
+    },
+    "vector/name": {
+     "macro": {
+      "recall@1": 0.3845,
+      "recall@3": 0.5579,
+      "recall@5": 0.6291,
+      "rr": 0.5033
+     },
+     "micro": {
+      "recall@1": 0.434,
+      "recall@3": 0.6104,
+      "recall@5": 0.6818,
+      "rr": 0.5503
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3077,
+       "recall@3": 0.6923,
+       "recall@5": 0.7692,
+       "rr": 0.52
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.5,
+       "rr": 0.2355
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.72,
+       "recall@3": 0.84,
+       "recall@5": 0.8667,
+       "rr": 0.7906
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.5957,
+       "recall@3": 0.766,
+       "recall@5": 0.8298,
+       "rr": 0.6992
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.549,
+       "recall@3": 0.8039,
+       "recall@5": 0.8627,
+       "rr": 0.687
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.2333,
+       "recall@3": 0.5333,
+       "recall@5": 0.6,
+       "rr": 0.4106
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.4118,
+       "recall@5": 0.4706,
+       "rr": 0.2547
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.0952,
+       "recall@3": 0.0952,
+       "recall@5": 0.1905,
+       "rr": 0.1719
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1515,
+       "recall@3": 0.1818,
+       "recall@5": 0.2424,
+       "rr": 0.2328
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.5057,
+       "recall@3": 0.7011,
+       "recall@5": 0.8161,
+       "rr": 0.6294
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.8,
+       "recall@3": 0.9714,
+       "recall@5": 0.9714,
+       "rr": 0.8786
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.1818,
+       "recall@3": 0.3636,
+       "recall@5": 0.4242,
+       "rr": 0.3273
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.7143,
+       "recall@3": 0.8571,
+       "recall@5": 0.8571,
+       "rr": 0.8061
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.6226,
+       "recall@3": 0.8491,
+       "recall@5": 0.8679,
+       "rr": 0.7439
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.2857,
+       "recall@5": 0.4286,
+       "rr": 0.3376
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2571,
+       "recall@3": 0.3714,
+       "recall@5": 0.4857,
+       "rr": 0.3715
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.6,
+       "recall@3": 0.6,
+       "recall@5": 0.6,
+       "rr": 0.625
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.4286,
+       "recall@5": 0.4286,
+       "rr": 0.3835
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.7692,
+       "recall@3": 0.8462,
+       "recall@5": 0.8462,
+       "rr": 0.8198
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.375,
+       "recall@3": 0.5938,
+       "recall@5": 0.7188,
+       "rr": 0.5066
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.2222,
+       "recall@5": 0.2222,
+       "rr": 0.2718
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.3214,
+       "recall@3": 0.6071,
+       "recall@5": 0.6429,
+       "rr": 0.4934
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.6364,
+       "recall@3": 0.9091,
+       "recall@5": 0.9545,
+       "rr": 0.7563
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.3571,
+       "recall@3": 0.5714,
+       "recall@5": 0.7143,
+       "rr": 0.516
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2564,
+       "recall@3": 0.4615,
+       "recall@5": 0.5128,
+       "rr": 0.3963
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.3333,
+       "recall@3": 0.6667,
+       "recall@5": 0.6667,
+       "rr": 0.5222
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.7333,
+       "recall@3": 0.8333,
+       "recall@5": 0.9,
+       "rr": 0.8012
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.3235,
+       "recall@3": 0.5588,
+       "recall@5": 0.6471,
+       "rr": 0.4662
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0,
+       "recall@3": 0.0455,
+       "recall@5": 0.0909,
+       "rr": 0.062
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.5,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.5933
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.3636,
+       "recall@3": 0.5758,
+       "recall@5": 0.7576,
+       "rr": 0.5157
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.5,
+       "recall@3": 0.7,
+       "recall@5": 0.7,
+       "rr": 0.6263
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.7143,
+       "recall@3": 0.9048,
+       "recall@5": 1.0,
+       "rr": 0.823
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.5,
+       "rr": 0.2204
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.0556,
+       "recall@5": 0.1667,
+       "rr": 0.0855
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.4706,
+       "recall@3": 0.5294,
+       "recall@5": 0.6471,
+       "rr": 0.5369
+      }
+     },
+     "queries": 924
+    }
+   }
+  },
+  "256": {
+   "chunk_words_max": 263,
+   "chunk_words_mean": 225.7,
+   "chunks": 4271,
+   "embed_seconds": 452.0,
+   "truncated_chunks": 4271,
+   "within_contract": {
+    "keyword/cuad": {
+     "macro": {
+      "recall@1": 0.338,
+      "recall@3": 0.5239,
+      "recall@5": 0.6279,
+      "rr": 0.4668
+     },
+     "micro": {
+      "recall@1": 0.4069,
+      "recall@3": 0.605,
+      "recall@5": 0.7089,
+      "rr": 0.5384
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3846,
+       "recall@3": 0.6154,
+       "recall@5": 0.7692,
+       "rr": 0.5232
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.375,
+       "rr": 0.1659
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5867,
+       "recall@3": 0.8133,
+       "recall@5": 0.9067,
+       "rr": 0.7247
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.6809,
+       "recall@3": 0.8298,
+       "recall@5": 0.9574,
+       "rr": 0.7789
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.549,
+       "recall@3": 0.7059,
+       "recall@5": 0.8235,
+       "rr": 0.6547
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.5,
+       "recall@3": 0.7333,
+       "recall@5": 0.8333,
+       "rr": 0.6325
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.1176,
+       "recall@3": 0.1765,
+       "recall@5": 0.2353,
+       "rr": 0.2182
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.1429,
+       "recall@3": 0.4762,
+       "recall@5": 0.619,
+       "rr": 0.3448
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.0909,
+       "recall@3": 0.2424,
+       "recall@5": 0.4848,
+       "rr": 0.2417
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.6782,
+       "recall@3": 0.8736,
+       "recall@5": 0.931,
+       "rr": 0.7866
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.3143,
+       "recall@3": 0.4857,
+       "recall@5": 0.6857,
+       "rr": 0.4603
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.1818,
+       "recall@3": 0.4242,
+       "recall@5": 0.5152,
+       "rr": 0.3387
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.5714,
+       "recall@5": 0.7143,
+       "rr": 0.4333
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.2453,
+       "recall@3": 0.6226,
+       "recall@5": 0.6792,
+       "rr": 0.4514
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2143,
+       "recall@3": 0.3571,
+       "recall@5": 0.5,
+       "rr": 0.3396
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2857,
+       "recall@3": 0.5143,
+       "recall@5": 0.6286,
+       "rr": 0.4418
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.4,
+       "recall@5": 0.4,
+       "rr": 0.4496
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.2857,
+       "recall@5": 0.2857,
+       "rr": 0.2117
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.3846,
+       "recall@3": 0.5385,
+       "recall@5": 0.5385,
+       "rr": 0.4977
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.1562,
+       "recall@3": 0.25,
+       "recall@5": 0.3125,
+       "rr": 0.2518
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.5556,
+       "recall@5": 0.5556,
+       "rr": 0.389
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.2143,
+       "recall@3": 0.4286,
+       "recall@5": 0.6071,
+       "rr": 0.3774
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.6364,
+       "recall@3": 0.9091,
+       "recall@5": 0.9545,
+       "rr": 0.7724
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.6429,
+       "recall@3": 0.8571,
+       "recall@5": 0.8571,
+       "rr": 0.7579
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.3846,
+       "recall@3": 0.5641,
+       "recall@5": 0.7179,
+       "rr": 0.5247
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.3333,
+       "rr": 0.1069
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6,
+       "recall@3": 0.8667,
+       "recall@5": 0.9,
+       "rr": 0.7314
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.2059,
+       "recall@3": 0.3824,
+       "recall@5": 0.4706,
+       "rr": 0.3446
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.4545,
+       "recall@3": 0.6364,
+       "recall@5": 0.6818,
+       "rr": 0.5695
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.25,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.473
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.7576,
+       "recall@3": 0.8182,
+       "recall@5": 0.9091,
+       "rr": 0.8085
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.5,
+       "recall@3": 0.5,
+       "recall@5": 0.7,
+       "rr": 0.5619
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.4762,
+       "recall@3": 0.6667,
+       "recall@5": 0.8571,
+       "rr": 0.6147
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.25,
+       "recall@3": 0.25,
+       "recall@5": 0.25,
+       "rr": 0.3144
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0556,
+       "recall@3": 0.2222,
+       "recall@5": 0.2778,
+       "rr": 0.1758
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.1765,
+       "recall@3": 0.4118,
+       "recall@5": 0.5882,
+       "rr": 0.337
+      }
+     },
+     "queries": 924
+    },
+    "keyword/name": {
+     "macro": {
+      "recall@1": 0.425,
+      "recall@3": 0.5935,
+      "recall@5": 0.6734,
+      "rr": 0.5404
+     },
+     "micro": {
+      "recall@1": 0.4643,
+      "recall@3": 0.6429,
+      "recall@5": 0.7121,
+      "rr": 0.5791
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.4615,
+       "recall@3": 0.5385,
+       "recall@5": 0.6154,
+       "rr": 0.5411
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.625,
+       "rr": 0.2388
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.52,
+       "recall@3": 0.68,
+       "recall@5": 0.7467,
+       "rr": 0.6358
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.5319,
+       "recall@3": 0.7021,
+       "recall@5": 0.766,
+       "rr": 0.6437
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.4902,
+       "recall@3": 0.7059,
+       "recall@5": 0.7647,
+       "rr": 0.6157
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.5,
+       "recall@3": 0.6333,
+       "recall@5": 0.7,
+       "rr": 0.5981
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.1765,
+       "recall@5": 0.4118,
+       "rr": 0.2046
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.1905,
+       "recall@3": 0.2381,
+       "recall@5": 0.381,
+       "rr": 0.3039
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.2121,
+       "recall@3": 0.4848,
+       "recall@5": 0.6061,
+       "rr": 0.3727
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.7126,
+       "recall@3": 0.8161,
+       "recall@5": 0.8506,
+       "rr": 0.7743
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.8571,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.9238
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.2121,
+       "recall@3": 0.4242,
+       "recall@5": 0.5455,
+       "rr": 0.3708
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.7143,
+       "recall@3": 0.7143,
+       "recall@5": 0.8571,
+       "rr": 0.7571
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.6226,
+       "recall@3": 0.8868,
+       "recall@5": 0.9623,
+       "rr": 0.7507
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.3571,
+       "recall@5": 0.4286,
+       "rr": 0.3554
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.4857,
+       "recall@3": 0.6857,
+       "recall@5": 0.7429,
+       "rr": 0.5954
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.4,
+       "recall@3": 0.4,
+       "recall@5": 0.6,
+       "rr": 0.4886
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.2857,
+       "recall@5": 0.4286,
+       "rr": 0.3561
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.5385,
+       "recall@3": 0.8462,
+       "recall@5": 0.8462,
+       "rr": 0.6816
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.1562,
+       "recall@3": 0.375,
+       "recall@5": 0.4062,
+       "rr": 0.3079
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.2222,
+       "recall@3": 0.4444,
+       "recall@5": 0.5556,
+       "rr": 0.3809
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.6071,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.6875
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.7273,
+       "recall@3": 0.9545,
+       "recall@5": 0.9545,
+       "rr": 0.8368
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 1.0,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 1.0
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2564,
+       "recall@3": 0.4872,
+       "recall@5": 0.5897,
+       "rr": 0.4231
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0555
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.7333,
+       "recall@3": 0.9667,
+       "recall@5": 0.9667,
+       "rr": 0.8407
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.2059,
+       "recall@3": 0.5,
+       "recall@5": 0.5294,
+       "rr": 0.3633
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0,
+       "recall@3": 0.0455,
+       "recall@5": 0.0455,
+       "rr": 0.068
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.8333
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.3939,
+       "recall@3": 0.6667,
+       "recall@5": 0.8182,
+       "rr": 0.5571
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.6,
+       "recall@3": 0.8,
+       "recall@5": 0.8,
+       "rr": 0.7157
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.6667,
+       "recall@3": 0.8571,
+       "recall@5": 0.8571,
+       "rr": 0.7512
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.5,
+       "recall@3": 1.0,
+       "recall@5": 1.0,
+       "rr": 0.75
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.1667,
+       "recall@3": 0.2222,
+       "recall@5": 0.4444,
+       "rr": 0.2877
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2353,
+       "recall@3": 0.4706,
+       "recall@5": 0.6471,
+       "rr": 0.3875
+      }
+     },
+     "queries": 924
+    },
+    "vector/cuad": {
+     "macro": {
+      "recall@1": 0.3107,
+      "recall@3": 0.4901,
+      "recall@5": 0.5809,
+      "rr": 0.4453
+     },
+     "micro": {
+      "recall@1": 0.3398,
+      "recall@3": 0.5335,
+      "recall@5": 0.6245,
+      "rr": 0.4776
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.5385,
+       "recall@3": 0.6154,
+       "recall@5": 0.8462,
+       "rr": 0.6262
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.125,
+       "recall@5": 0.375,
+       "rr": 0.1864
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.4667,
+       "recall@3": 0.76,
+       "recall@5": 0.8667,
+       "rr": 0.6455
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.4468,
+       "recall@3": 0.766,
+       "recall@5": 0.7872,
+       "rr": 0.6152
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.4902,
+       "recall@3": 0.6471,
+       "recall@5": 0.7843,
+       "rr": 0.612
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.4333,
+       "recall@3": 0.7,
+       "recall@5": 0.7,
+       "rr": 0.5848
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.0588,
+       "recall@3": 0.3529,
+       "recall@5": 0.3529,
+       "rr": 0.2249
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.1905,
+       "recall@3": 0.4286,
+       "recall@5": 0.4286,
+       "rr": 0.3643
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1818,
+       "recall@3": 0.2121,
+       "recall@5": 0.2424,
+       "rr": 0.2519
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.3908,
+       "recall@3": 0.6207,
+       "recall@5": 0.7356,
+       "rr": 0.5432
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.6286,
+       "recall@3": 0.7143,
+       "recall@5": 0.7714,
+       "rr": 0.7077
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.0909,
+       "recall@3": 0.2121,
+       "recall@5": 0.303,
+       "rr": 0.2277
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.2857,
+       "recall@3": 0.5714,
+       "recall@5": 0.5714,
+       "rr": 0.4821
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.0943,
+       "recall@3": 0.3019,
+       "recall@5": 0.434,
+       "rr": 0.2639
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.3571,
+       "recall@3": 0.3571,
+       "recall@5": 0.3571,
+       "rr": 0.4205
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2857,
+       "recall@3": 0.4,
+       "recall@5": 0.4857,
+       "rr": 0.3875
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.2,
+       "recall@3": 0.4,
+       "recall@5": 0.6,
+       "rr": 0.3506
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.1429,
+       "recall@5": 0.4286,
+       "rr": 0.266
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.7692,
+       "recall@3": 0.9231,
+       "recall@5": 0.9231,
+       "rr": 0.8354
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.1562,
+       "recall@3": 0.5,
+       "recall@5": 0.5312,
+       "rr": 0.3397
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.1111,
+       "recall@3": 0.2222,
+       "recall@5": 0.3333,
+       "rr": 0.2472
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.1071,
+       "recall@3": 0.2143,
+       "recall@5": 0.3214,
+       "rr": 0.228
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.6818,
+       "recall@3": 0.8182,
+       "recall@5": 0.8636,
+       "rr": 0.7626
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.3571,
+       "recall@5": 0.5714,
+       "rr": 0.3988
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.3333,
+       "recall@3": 0.5128,
+       "recall@5": 0.641,
+       "rr": 0.4725
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.0,
+       "recall@3": 0.6667,
+       "recall@5": 0.6667,
+       "rr": 0.3333
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.6,
+       "recall@3": 0.7333,
+       "recall@5": 0.8333,
+       "rr": 0.7035
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.1765,
+       "recall@3": 0.3824,
+       "recall@5": 0.4706,
+       "rr": 0.3121
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.2273,
+       "recall@3": 0.4091,
+       "recall@5": 0.5455,
+       "rr": 0.3594
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.7581
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.4848,
+       "recall@3": 0.7273,
+       "recall@5": 0.8485,
+       "rr": 0.6394
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.4,
+       "recall@3": 0.5,
+       "recall@5": 0.7,
+       "rr": 0.5142
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.5238,
+       "recall@3": 0.6667,
+       "recall@5": 0.8571,
+       "rr": 0.6418
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.0,
+       "recall@3": 0.0,
+       "recall@5": 0.0,
+       "rr": 0.0855
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0,
+       "recall@3": 0.1667,
+       "recall@5": 0.2222,
+       "rr": 0.1228
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.2941,
+       "recall@3": 0.7647,
+       "recall@5": 0.7647,
+       "rr": 0.5146
+      }
+     },
+     "queries": 924
+    },
+    "vector/name": {
+     "macro": {
+      "recall@1": 0.3767,
+      "recall@3": 0.5787,
+      "recall@5": 0.6611,
+      "rr": 0.5125
+     },
+     "micro": {
+      "recall@1": 0.3961,
+      "recall@3": 0.6147,
+      "recall@5": 0.6926,
+      "rr": 0.5343
+     },
+     "per_type": {
+      "affiliate_license_licensee": {
+       "queries": 13,
+       "recall@1": 0.3846,
+       "recall@3": 0.6923,
+       "recall@5": 0.6923,
+       "rr": 0.5343
+      },
+      "affiliate_license_licensor": {
+       "queries": 8,
+       "recall@1": 0.0,
+       "recall@3": 0.25,
+       "recall@5": 0.5,
+       "rr": 0.2045
+      },
+      "anti_assignment": {
+       "queries": 75,
+       "recall@1": 0.5333,
+       "recall@3": 0.76,
+       "recall@5": 0.8533,
+       "rr": 0.6721
+      },
+      "audit_rights": {
+       "queries": 47,
+       "recall@1": 0.4894,
+       "recall@3": 0.6809,
+       "recall@5": 0.8298,
+       "rr": 0.623
+      },
+      "cap_on_liability": {
+       "queries": 51,
+       "recall@1": 0.5098,
+       "recall@3": 0.8235,
+       "recall@5": 0.8235,
+       "rr": 0.6686
+      },
+      "change_of_control": {
+       "queries": 30,
+       "recall@1": 0.2,
+       "recall@3": 0.5667,
+       "recall@5": 0.6,
+       "rr": 0.3902
+      },
+      "competitive_restriction_exception": {
+       "queries": 17,
+       "recall@1": 0.1176,
+       "recall@3": 0.2941,
+       "recall@5": 0.5294,
+       "rr": 0.2794
+      },
+      "covenant_not_to_sue": {
+       "queries": 21,
+       "recall@1": 0.0952,
+       "recall@3": 0.1905,
+       "recall@5": 0.3333,
+       "rr": 0.2233
+      },
+      "exclusivity": {
+       "queries": 33,
+       "recall@1": 0.1515,
+       "recall@3": 0.2424,
+       "recall@5": 0.303,
+       "rr": 0.2481
+      },
+      "governing_law": {
+       "queries": 87,
+       "recall@1": 0.3333,
+       "recall@3": 0.5747,
+       "recall@5": 0.6782,
+       "rr": 0.4896
+      },
+      "insurance": {
+       "queries": 35,
+       "recall@1": 0.7429,
+       "recall@3": 0.7714,
+       "recall@5": 0.8571,
+       "rr": 0.7916
+      },
+      "ip_ownership_assignment": {
+       "queries": 33,
+       "recall@1": 0.2424,
+       "recall@3": 0.5758,
+       "recall@5": 0.6364,
+       "rr": 0.4317
+      },
+      "joint_ip": {
+       "queries": 7,
+       "recall@1": 0.7143,
+       "recall@3": 0.8571,
+       "recall@5": 0.8571,
+       "rr": 0.7987
+      },
+      "license_grant": {
+       "queries": 53,
+       "recall@1": 0.5283,
+       "recall@3": 0.8302,
+       "recall@5": 0.8679,
+       "rr": 0.6786
+      },
+      "liquidated_damages": {
+       "queries": 14,
+       "recall@1": 0.2857,
+       "recall@3": 0.2857,
+       "recall@5": 0.5714,
+       "rr": 0.3844
+      },
+      "minimum_commitment": {
+       "queries": 35,
+       "recall@1": 0.2571,
+       "recall@3": 0.4571,
+       "recall@5": 0.5429,
+       "rr": 0.396
+      },
+      "most_favored_nation": {
+       "queries": 5,
+       "recall@1": 0.2,
+       "recall@3": 0.2,
+       "recall@5": 0.6,
+       "rr": 0.3158
+      },
+      "no_solicit_customers": {
+       "queries": 7,
+       "recall@1": 0.1429,
+       "recall@3": 0.2857,
+       "recall@5": 0.4286,
+       "rr": 0.3078
+      },
+      "no_solicit_employees": {
+       "queries": 13,
+       "recall@1": 0.7692,
+       "recall@3": 0.9231,
+       "recall@5": 0.9231,
+       "rr": 0.8484
+      },
+      "non_compete": {
+       "queries": 32,
+       "recall@1": 0.4062,
+       "recall@3": 0.6562,
+       "recall@5": 0.6875,
+       "rr": 0.5353
+      },
+      "non_disparagement": {
+       "queries": 9,
+       "recall@1": 0.3333,
+       "recall@3": 0.3333,
+       "recall@5": 0.4444,
+       "rr": 0.4117
+      },
+      "non_transferable_license": {
+       "queries": 28,
+       "recall@1": 0.2143,
+       "recall@3": 0.4643,
+       "recall@5": 0.5357,
+       "rr": 0.38
+      },
+      "notice_to_end_renewal": {
+       "queries": 22,
+       "recall@1": 0.7273,
+       "recall@3": 0.8636,
+       "recall@5": 0.8636,
+       "rr": 0.8007
+      },
+      "perpetual_license": {
+       "queries": 14,
+       "recall@1": 0.4286,
+       "recall@3": 0.7143,
+       "recall@5": 0.7143,
+       "rr": 0.5906
+      },
+      "post_termination_services": {
+       "queries": 39,
+       "recall@1": 0.2821,
+       "recall@3": 0.5641,
+       "recall@5": 0.6923,
+       "rr": 0.4633
+      },
+      "price_restrictions": {
+       "queries": 3,
+       "recall@1": 0.3333,
+       "recall@3": 0.6667,
+       "recall@5": 0.6667,
+       "rr": 0.5417
+      },
+      "renewal_term": {
+       "queries": 30,
+       "recall@1": 0.7,
+       "recall@3": 0.8667,
+       "recall@5": 0.9333,
+       "rr": 0.7917
+      },
+      "revenue_sharing": {
+       "queries": 34,
+       "recall@1": 0.3824,
+       "recall@3": 0.5882,
+       "recall@5": 0.7059,
+       "rr": 0.5271
+      },
+      "rofr": {
+       "queries": 22,
+       "recall@1": 0.0455,
+       "recall@3": 0.0909,
+       "recall@5": 0.0909,
+       "rr": 0.1116
+      },
+      "source_code_escrow": {
+       "queries": 4,
+       "recall@1": 0.75,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.7727
+      },
+      "termination_for_convenience": {
+       "queries": 33,
+       "recall@1": 0.4848,
+       "recall@3": 0.7879,
+       "recall@5": 0.8485,
+       "rr": 0.6395
+      },
+      "third_party_beneficiary": {
+       "queries": 10,
+       "recall@1": 0.5,
+       "recall@3": 0.7,
+       "recall@5": 0.8,
+       "rr": 0.6113
+      },
+      "uncapped_liability": {
+       "queries": 21,
+       "recall@1": 0.619,
+       "recall@3": 0.9048,
+       "recall@5": 0.9048,
+       "rr": 0.752
+      },
+      "unlimited_license": {
+       "queries": 4,
+       "recall@1": 0.25,
+       "recall@3": 0.75,
+       "recall@5": 0.75,
+       "rr": 0.5071
+      },
+      "volume_restriction": {
+       "queries": 18,
+       "recall@1": 0.0556,
+       "recall@3": 0.1667,
+       "recall@5": 0.2778,
+       "rr": 0.175
+      },
+      "warranty_duration": {
+       "queries": 17,
+       "recall@1": 0.3529,
+       "recall@3": 0.7059,
+       "recall@5": 0.7059,
+       "rr": 0.554
+      }
+     },
+     "queries": 924
+    }
+   }
+  }
+ },
+ "dev_contracts": 102,
+ "notes": {
+  "truncated_chunks": "The truncated_chunks values in dev were counted with the tokenizer's padding on, so every chunk in a batch was padded to the batch's longest and counted with it; they are not truncation counts. The corrected counts of chunks longer than 512 tokens (the model reads only the first 512) are in truncated_chunks_corrected, computed after the run on the same dev contracts and chunks with the pinned tokenizer, padding and truncation off. The counter is fixed in Embedder.truncated, so a new run writes correct counts and this note can then be removed.",
+  "truncated_chunks_corrected": {
+   "64": 18,
+   "128": 30,
+   "256": 67
+  }
+ },
+ "rule": "on the dev set, the chunk size (64, 128 or 256 words) with the highest mean of vector and keyword within-contract recall@3 (CUAD questions); ties go to the smaller size",
+ "seed": 20261128
+}

@@ -14,6 +14,11 @@ contract-key-terms-mcp = "key_terms_mcp.server:main"
 [dependency-groups]
 dev = ["pytest>=8", "pytest-asyncio>=0.23", "ruff>=0.6"]
 demo = ["pillow>=11"]
+eval = ["scikit-learn>=1.5", "numpy>=2"]
+
+[tool.uv]
+# Supply-chain hold: resolve only to files uploaded at least 7 days before locking.
+exclude-newer = "7 days"
 
 [build-system]
 requires = ["hatchling>=1.27"]

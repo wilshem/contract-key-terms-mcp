@@ -1,0 +1,563 @@
+{
+ "version": "fixture",
+ "data": [
+  {
+   "title": "FIXTURE_CONTRACT_00",
+   "paragraphs": [
+    {
+     "context": "Each party has read this Agreement and agrees to its terms.\nThe price list is attached as Exhibit A and may be updated each year.\nThe Supplier will deliver the goods to the Delaware warehouse each month.\nNotices will be sent by email to the addresses on the signature page.\nEach party has read this Agreement and agrees to its terms.\nThe Supplier will deliver the goods to the Nevada warehouse each month.\nPayment is due within thirty days of the invoice date.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_00__Governing Law",
+       "question": "Governing Law",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_00__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_00__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_01",
+   "paragraphs": [
+    {
+     "context": "The price list is attached as Exhibit A and may be updated each year.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Nevada warehouse each month.\nThis Agreement shall be governed by the laws of the State of New York.\nNotices will be sent by email to the addresses on the signature page.\nThis Agreement may not be assigned by either party without written consent.\nThe Supplier will deliver the goods to the New York warehouse each month.\nThe Supplier will deliver the goods to the Nevada warehouse each month.\nPayment is due within thirty days of the invoice date.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_01__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "This Agreement shall be governed by the laws of the State of New York.",
+         "answer_start": 267
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_01__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "This Agreement may not be assigned by either party without written consent.",
+         "answer_start": 408
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_01__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_02",
+   "paragraphs": [
+    {
+     "context": "The price list is attached as Exhibit A and may be updated each year.\nNotices will be sent by email to the addresses on the signature page.\nNotices will be sent by email to the addresses on the signature page.\nNotices will be sent by email to the addresses on the signature page.\nThis Agreement shall be governed by the laws of the State of Delaware.\nNotices will be sent by email to the addresses on the signature page.\nNeither party may assign this Agreement without the prior written consent of the other party.\nEach party has read this Agreement and agrees to its terms.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Nevada warehouse each month.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_02__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "This Agreement shall be governed by the laws of the State of Delaware.",
+         "answer_start": 280
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_02__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "Neither party may assign this Agreement without the prior written consent of the other party.",
+         "answer_start": 421
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_02__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_03",
+   "paragraphs": [
+    {
+     "context": "The Supplier will deliver the goods to the Nevada warehouse each month.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\nEach party has read this Agreement and agrees to its terms.\nThe laws of Texas shall govern this Agreement and any dispute under it.\nEach party has read this Agreement and agrees to its terms.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_03__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Texas shall govern this Agreement and any dispute under it.",
+         "answer_start": 257
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_03__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_03__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_04",
+   "paragraphs": [
+    {
+     "context": "Notices will be sent by email to the addresses on the signature page.\nEach party has read this Agreement and agrees to its terms.\nThe price list is attached as Exhibit A and may be updated each year.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Nevada warehouse each month.\nThis Agreement may not be assigned by either party without written consent.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nThe price list is attached as Exhibit A and may be updated each year.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_04__Governing Law",
+       "question": "Governing Law",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_04__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "This Agreement may not be assigned by either party without written consent.",
+         "answer_start": 342
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_04__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_05",
+   "paragraphs": [
+    {
+     "context": "The Supplier will deliver the goods to the Nevada warehouse each month.\nNotices will be sent by email to the addresses on the signature page.\nEach party has read this Agreement and agrees to its terms.\nEach party has read this Agreement and agrees to its terms.\nThe laws of Nevada shall govern this Agreement and any dispute under it.\nThe price list is attached as Exhibit A and may be updated each year.\nNeither party may assign this Agreement without the prior written consent of the other party.\nEach party has read this Agreement and agrees to its terms.\nThe Supplier will deliver the goods to the Delaware warehouse each month.\nEach party has read this Agreement and agrees to its terms.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_05__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Nevada shall govern this Agreement and any dispute under it.",
+         "answer_start": 262
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_05__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "Neither party may assign this Agreement without the prior written consent of the other party.",
+         "answer_start": 405
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_05__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_06",
+   "paragraphs": [
+    {
+     "context": "Notices will be sent by email to the addresses on the signature page.\nThe price list is attached as Exhibit A and may be updated each year.\nThe price list is attached as Exhibit A and may be updated each year.\nEach party has read this Agreement and agrees to its terms.\nThe laws of Texas shall govern this Agreement and any dispute under it.\nPayment is due within thirty days of the invoice date.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\nThe Supplier will deliver the goods to the New York warehouse each month.\nEach party has read this Agreement and agrees to its terms.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_06__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Texas shall govern this Agreement and any dispute under it.",
+         "answer_start": 270
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_06__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_06__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_07",
+   "paragraphs": [
+    {
+     "context": "Payment is due within thirty days of the invoice date.\nThe price list is attached as Exhibit A and may be updated each year.\nThe Supplier will deliver the goods to the New York warehouse each month.\nThe price list is attached as Exhibit A and may be updated each year.\nThe laws of New York shall govern this Agreement and any dispute under it.\nThe price list is attached as Exhibit A and may be updated each year.\nThis Agreement may not be assigned by either party without written consent.\nThe price list is attached as Exhibit A and may be updated each year.\nThe price list is attached as Exhibit A and may be updated each year.\nPayment is due within thirty days of the invoice date.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_07__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of New York shall govern this Agreement and any dispute under it.",
+         "answer_start": 269
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_07__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "This Agreement may not be assigned by either party without written consent.",
+         "answer_start": 414
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_07__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_08",
+   "paragraphs": [
+    {
+     "context": "Payment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nThe price list is attached as Exhibit A and may be updated each year.\nPayment is due within thirty days of the invoice date.\nThis Agreement may not be assigned by either party without written consent.\nThe Supplier will deliver the goods to the New York warehouse each month.\nThe price list is attached as Exhibit A and may be updated each year.\nEach party has read this Agreement and agrees to its terms.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_08__Governing Law",
+       "question": "Governing Law",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_08__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "This Agreement may not be assigned by either party without written consent.",
+         "answer_start": 290
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_08__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_09",
+   "paragraphs": [
+    {
+     "context": "Notices will be sent by email to the addresses on the signature page.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\nThe laws of Ohio shall govern this Agreement and any dispute under it.\nThe price list is attached as Exhibit A and may be updated each year.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\nThe price list is attached as Exhibit A and may be updated each year.\nPayment is due within thirty days of the invoice date.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_09__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Ohio shall govern this Agreement and any dispute under it.",
+         "answer_start": 265
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_09__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_09__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_10",
+   "paragraphs": [
+    {
+     "context": "Payment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nEach party has read this Agreement and agrees to its terms.\nThe Supplier will deliver the goods to the Delaware warehouse each month.\nThis Agreement shall be governed by the laws of the State of Nevada.\nPayment is due within thirty days of the invoice date.\nNeither party may assign this Agreement without the prior written consent of the other party.\nEach party has read this Agreement and agrees to its terms.\nThe Supplier will deliver the goods to the Delaware warehouse each month.\nPayment is due within thirty days of the invoice date.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_10__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "This Agreement shall be governed by the laws of the State of Nevada.",
+         "answer_start": 244
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_10__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "Neither party may assign this Agreement without the prior written consent of the other party.",
+         "answer_start": 368
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_10__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_11",
+   "paragraphs": [
+    {
+     "context": "The price list is attached as Exhibit A and may be updated each year.\nEach party has read this Agreement and agrees to its terms.\nNotices will be sent by email to the addresses on the signature page.\nThe price list is attached as Exhibit A and may be updated each year.\nThis Agreement shall be governed by the laws of the State of Ohio.\nThe price list is attached as Exhibit A and may be updated each year.\nThis Agreement may not be assigned by either party without written consent.\nEach party has read this Agreement and agrees to its terms.\nPayment is due within thirty days of the invoice date.\nEach party has read this Agreement and agrees to its terms.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_11__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "This Agreement shall be governed by the laws of the State of Ohio.",
+         "answer_start": 270
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_11__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "This Agreement may not be assigned by either party without written consent.",
+         "answer_start": 407
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_11__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_12",
+   "paragraphs": [
+    {
+     "context": "Each party has read this Agreement and agrees to its terms.\nPayment is due within thirty days of the invoice date.\nThe Supplier will deliver the goods to the New York warehouse each month.\nNotices will be sent by email to the addresses on the signature page.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Florida warehouse each month.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_12__Governing Law",
+       "question": "Governing Law",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_12__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_12__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_13",
+   "paragraphs": [
+    {
+     "context": "Each party has read this Agreement and agrees to its terms.\nEach party has read this Agreement and agrees to its terms.\nEach party has read this Agreement and agrees to its terms.\nNotices will be sent by email to the addresses on the signature page.\nThe laws of Florida shall govern this Agreement and any dispute under it.\nPayment is due within thirty days of the invoice date.\nNeither party may assign this Agreement without the prior written consent of the other party.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_13__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Florida shall govern this Agreement and any dispute under it.",
+         "answer_start": 250
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_13__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "Neither party may assign this Agreement without the prior written consent of the other party.",
+         "answer_start": 379
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_13__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_14",
+   "paragraphs": [
+    {
+     "context": "Each party has read this Agreement and agrees to its terms.\nThe Supplier will deliver the goods to the Delaware warehouse each month.\nEach party has read this Agreement and agrees to its terms.\nEach party has read this Agreement and agrees to its terms.\nThe laws of Ohio shall govern this Agreement and any dispute under it.\nEach party has read this Agreement and agrees to its terms.\nNeither party may assign this Agreement without the prior written consent of the other party.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_14__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "The laws of Ohio shall govern this Agreement and any dispute under it.",
+         "answer_start": 254
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_14__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [
+        {
+         "text": "Neither party may assign this Agreement without the prior written consent of the other party.",
+         "answer_start": 385
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_14__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "FIXTURE_CONTRACT_15",
+   "paragraphs": [
+    {
+     "context": "Payment is due within thirty days of the invoice date.\nNotices will be sent by email to the addresses on the signature page.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\nEach party has read this Agreement and agrees to its terms.\nThis Agreement shall be governed by the laws of the State of Florida.\nThe Supplier will deliver the goods to the Ohio warehouse each month.\nPayment is due within thirty days of the invoice date.\nPayment is due within thirty days of the invoice date.\nEach party has read this Agreement and agrees to its terms.\n",
+     "qas": [
+      {
+       "id": "FIXTURE_CONTRACT_15__Governing Law",
+       "question": "Governing Law",
+       "answers": [
+        {
+         "text": "This Agreement shall be governed by the laws of the State of Florida.",
+         "answer_start": 255
+        }
+       ],
+       "is_impossible": false
+      },
+      {
+       "id": "FIXTURE_CONTRACT_15__Anti-Assignment",
+       "question": "Anti-Assignment",
+       "answers": [],
+       "is_impossible": true
+      },
+      {
+       "id": "FIXTURE_CONTRACT_15__Parties",
+       "question": "Parties",
+       "answers": [],
+       "is_impossible": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

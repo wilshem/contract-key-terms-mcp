@@ -20,14 +20,20 @@ _VERB = re.compile(r"\b(?:shall|may|will|must|is|are|be|has|have|agrees?|grants?
 _SENTENCE = re.compile(r"[^.;\n](?:[^.;]|\.(?=\d)|\n(?!\s*\n))*[.;]?")
 
 
-def sentences(text: str) -> list[tuple[str, int]]:
-    """(sentence with its white space collapsed, character offset) for each sentence of the text."""
+def sentence_spans(text: str) -> list[tuple[str, int, int]]:
+    """(sentence with its white space collapsed, start, end) for each sentence; text[start:end] is the sentence as
+    written."""
     out = []
     for m in _SENTENCE.finditer(text):
         s = " ".join(m.group(0).split())
         if len(s) > 3:
-            out.append((s, m.start()))
+            out.append((s, m.start(), m.end()))
     return out
+
+
+def sentences(text: str) -> list[tuple[str, int]]:
+    """(sentence with its white space collapsed, character offset) for each sentence of the text."""
+    return [(s, start) for s, start, _ in sentence_spans(text)]
 
 
 def heading_only(sentence: str) -> bool:
@@ -37,8 +43,9 @@ def heading_only(sentence: str) -> bool:
 
 
 def model_used(m: SentenceModel, clause: str) -> bool:
-    """Whether the model is used for this type. For 3 types its scores were too weak in training ("rules")."""
-    return m.clauses[clause]["use"] == "either"
+    """Whether the model is used for this type ("model"), or the type is switched off ("off") by the evaluation's
+    switch-off rule (docs/evaluation/results.md)."""
+    return m.clauses[clause]["use"] == "model"
 
 
 def passage(s: str, off: int, p: float) -> dict:

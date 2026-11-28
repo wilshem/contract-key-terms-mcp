@@ -13,8 +13,12 @@ What the server does and never does:
   that differs from a denied one only in case.
 - A file with more than one hard link is refused, because another of its names could be in a denied folder
   where no path check can see it. A genuine file that happens to have several hard links is refused too.
-- It never writes, moves or deletes files.
-- It checks the model file's SHA-256 before loading it.
+- It never writes, moves or deletes your files. It writes nothing at all unless you turn its usage log on
+  (`--log` or `KEY_TERMS_LOG=on`); the log holds only the time, tool name, duration and success of each call,
+  never document text, questions or paths, and on Linux and macOS is opened without following a link.
+- `search_clauses` reads files through the same checks as the other tools; a refused file is skipped and
+  counted, never named.
+- It checks the SHA-256 of the clause model before loading it.
 - Contract text it returns is quoted as data. Treat it as untrusted: a document can contain text written
   to look like instructions.
 
